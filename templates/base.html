@@ -30,16 +30,18 @@
       <div class="col-12 navigation-bar">
         <nav class="sidenav-trigger red lighten-3">
           <div class="nav-wrapper">
-            <a href="{{ url_for('home') }}" class="logo" src="static/css/images/logo_white.png" alt="Meatblog"></a>
+            <a href="{{ url_for('home') }}">
+              <img class="logo" src="static/css/images/logo.png" alt="Meatblog"
+            /></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right"
               ><i class="fas fa-bars"></i
             ></a>
             <ul class="right hide-on-med-and-down">
-              <li><a href="{{ url_for('find_recipe') }}">Find a Recipe</a></li>
-              <li><a href="#">Add a Recipe</a></li>
+              <li><a href="{{ url_for('find_recipe') }}">Find Recipe</a></li>
+              <li><a href="#">Add Recipe</a></li>
               <li><a href="#">Manage Recipes</a></li>
               <li><a href="#">About</a></li>
-              <li><a href="#">Order Fresh Meat</a></li>
+              <li><a href="#">Order Meat</a></li>
             </ul>
           </div>
         </nav>

@@ -14,6 +14,11 @@ h6 {
     font-family: 'Playfair Display', serif;
     color: #383838;
 }
+ 
+.container {
+    margin-left: 40px;
+    margin-right: 40px;
+} 
 
 /* Navigation Styling */
 .navigation-bar {
@@ -27,6 +32,6 @@ h6 {
     padding-right: 30px;
 }
 
-.nav li {
-
+.logo {
+    height: 50px;
 }
