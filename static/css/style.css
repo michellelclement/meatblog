@@ -1,0 +1,32 @@
+html, body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: font-family; 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    color: #383838;
+}
+
+/* Navigation Styling */
+.navigation-bar {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: 'Open Sans';
+}
+
+.nav-wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.nav li {
+
+}

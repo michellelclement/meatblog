@@ -13,6 +13,10 @@
       type="text/css"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/style.css') }}"
     />
@@ -22,21 +26,25 @@
 
   <header>
     <!--Main Nav Bar -->
-    <nav class="sidenav-trigger red lighten-3">
-      <div class="nav-wrapper">
-        <a href="{{ url_for('home') }}" class="brand-logo">MEATBLOG</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger right"
-          ><i class="fas fa-bars"></i
-        ></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="{{ url_for('find_recipe') }}">Find a Recipe</a></li>
-          <li><a href="#">Add a Recipe</a></li>
-          <li><a href="#">Manage Recipes</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Order Fresh Meat</a></li>
-        </ul>
+    <div class="row">
+      <div class="col-12 navigation-bar">
+        <nav class="sidenav-trigger red lighten-3">
+          <div class="nav-wrapper">
+            <a href="{{ url_for('home') }}" class="logo" src="static/css/images/logo_white.png" alt="Meatblog"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"
+              ><i class="fas fa-bars"></i
+            ></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="{{ url_for('find_recipe') }}">Find a Recipe</a></li>
+              <li><a href="#">Add a Recipe</a></li>
+              <li><a href="#">Manage Recipes</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Order Fresh Meat</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
-    </nav>
+    </div>
     <!-- Mobile Nav Bar -->
     <ul class="sidenav" id="mobile-demo">
       <li><a href="{{ url_for('find_recipe') }}">Find a Recipe</a></li>
