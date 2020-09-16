@@ -14,11 +14,11 @@ h6 {
     font-family: 'Playfair Display', serif;
     color: #383838;
 }
- 
+
 .container {
-    margin-left: 40px;
-    margin-right: 40px;
-} 
+    margin-left: 0px;
+    margin-right: 0px;
+}
 
 /* Navigation Styling */
 .navigation-bar {
