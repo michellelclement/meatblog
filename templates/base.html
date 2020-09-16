@@ -23,30 +23,35 @@
   <header>
     <!--Main Nav Bar -->
     <nav class="sidenav-trigger red lighten-3">
-          <div class="nav-wrapper">
-            <a href="#" class="brand-logo">MEATBLOG</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"
-            ><i class="fas fa-bars"></i></a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="{{ url_for('get_recipes') }}">Find a Recipe</a></li>
-              <li><a href="#">Add a Recipe</a></li>
-              <li><a href="#">Manage Recipes</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Order Fresh Meat</a></li>
-            </ul>
-          </div>
-        </nav>
-        <!-- Mobile Nav Bar -->
-        <ul class="sidenav" id="mobile-demo">
-          <li><a href="{{ url_for('get_recipes') }}">Find a Recipe</a></li>
+      <div class="nav-wrapper">
+        <a href="{{ url_for('home') }}" class="brand-logo">MEATBLOG</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger right"
+          ><i class="fas fa-bars"></i
+        ></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="{{ url_for('find_recipe') }}">Find a Recipe</a></li>
           <li><a href="#">Add a Recipe</a></li>
           <li><a href="#">Manage Recipes</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Order Fresh Meat</a></li>
         </ul>
+      </div>
+    </nav>
+    <!-- Mobile Nav Bar -->
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="{{ url_for('find_recipe') }}">Find a Recipe</a></li>
+      <li><a href="#">Add a Recipe</a></li>
+      <li><a href="#">Manage Recipes</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Order Fresh Meat</a></li>
+    </ul>
   </header>
 
   <body>
+    <main class="container">
+      {% block content %} {% endblock %}
+    </main>
+
     <!-- Scripts -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
