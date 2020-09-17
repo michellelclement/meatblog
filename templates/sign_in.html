@@ -1,0 +1,66 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="row">
+  <div class="col">
+    <h2>Sign In</h2>
+    <p> Sign in to your account to update your recipes, or to share new recipes.
+    </p>
+  </div>
+</div>
+<div class="row">
+  <form class="col s12" method="POST" action="{{ url_for('sign_up') }}">
+    <div class="card-panel">
+      <!-- Username -->
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="far fa-user-circle prefix"></i>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            minlength="5"
+            maxlength="15"
+            pattern="^[a-zA-Z0-9]{5,15}$"
+            class="validate"
+            required
+          />
+          <label for="icon_prefix">Username</label>
+        </div>
+      </div>
+      <!-- Password -->
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="fas fa-unlock prefix"></i>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            minlength="5"
+            maxlength="15"
+            pattern="^[a-zA-Z0-9]{5,15}$"
+            class="validate"
+            required
+          />
+          <label for="password">Password</label>
+        </div>
+      </div>
+
+      <!-- Register -->
+      <div class="row">
+        <button type="submit" class="col s12 btn-large red lighten-2">
+          Sign Up
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- New here? Sign up -->
+<div class="row">
+  <div class="col s12">
+    <p class="center-align">New here?<a href="{{ url_for('sign_up') }}" class="red lighten-2"
+        >Sign up here</a></p>
+  </div>
+</div>
+
+{% endblock %}
