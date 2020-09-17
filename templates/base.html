@@ -38,10 +38,20 @@
             ></a>
             <ul class="right hide-on-med-and-down">
               <li><a href="{{ url_for('find_recipe') }}">Find Recipe</a></li>
+              {% if session.user %}
               <li><a href="#">Add Recipe</a></li>
               <li><a href="#">Manage Recipes</a></li>
+              {% else %}
               <li><a href="#">About</a></li>
               <li><a href="#">Order Meat</a></li>
+              {% endif %}
+              {% if session.user %}
+              <li>
+                <a href="#" class="waves-effect waves-light btn red lighten-2"
+                  >Sign Out</a
+                >
+              </li>
+              {% else %}
               <li>
                 <a
                   href="{{ url_for('sign_up') }}"
@@ -50,10 +60,13 @@
                 >
               </li>
               <li>
-                <a class="waves-effect waves-light btn red lighten-2"
+                <a
+                  href="{{ url_for('sign_in') }}"
+                  class="waves-effect waves-light btn red lighten-2"
                   >Sign In</a
                 >
               </li>
+              {% endif %}
             </ul>
           </div>
         </nav>
@@ -71,7 +84,13 @@
           >Sign Up</a
         >
       </li>
-      <li><a class="waves-effect waves-light btn">Sign In</a></li>
+      <li>
+        <a
+          href="{{ url_for('sign_in') }}"
+          class="waves-effect waves-light btn red lighten-2"
+          >Sign In</a
+        >
+      </li>
     </ul>
   </header>
 
@@ -81,7 +100,7 @@
       {% with messages = get_flashed_messages() %} {% if messages %} {% for
       message in messages %}
       <div class="row flashes">
-        <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
+        <h4 class="red lighten-2 center-align">{{ message }}</h4>
       </div>
       {% endfor %} {% endif %} {% endwith %}
     </section>

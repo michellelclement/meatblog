@@ -54,10 +54,10 @@ def sign_up():
 
 
 # Log in Function
-app.route("/sign_in", methods=["GET", "POST"])
+@app.route("/sign_in", methods=["GET", "POST"])
 def sign_in():
     if request.method == "POST":
-        # Check to see if username already exists in db
+        # check to see if username exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -69,19 +69,19 @@ def sign_in():
                 flash("Welcome, {}".format(
                     request.form.get("username")))
                 # below to be added after profile page is created - redirect user to their profile
-                return redirect(url_for("recipe", username=session["user"]))
+                # return redirect(url_for("profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("sign_in"))
 
         else:
-            # username doesn't exist
+        # username doesn't exist
             flash("Incorrect Username and/or Password")
             return redirect(url_for("sign_in"))
 
     return render_template("sign_in.html")
-
+        
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
