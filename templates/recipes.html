@@ -16,7 +16,7 @@
         <p><em>by: {{ recipe.created_by }}</em></p>
       </div>
       <div class="col s3">
-        <a href="#" class="waves-effect waves-light btn red lighten-2"
+        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn red lighten-2"
           >Edit Recipe</a
         >
         <a href="#" class="waves-effect waves-light btn red lighten-2"

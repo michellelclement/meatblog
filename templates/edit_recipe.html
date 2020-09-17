@@ -1,0 +1,103 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="col">
+  <div class="row">
+    <h1>Edit Recipe</h1>
+  </div>
+</div>
+
+<div class="row card-panel">
+  <form class="col s12" method="POST" 
+  action="{{ url_for('add_recipe', recipe_id=recipe._id) }}">
+    <!-- Category Selector -->
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="fas fa-chevron-down prefix"></i>
+        <select id="category" name="category" class="validate" required>
+          <option value="" disabled selected>Select Meal Category</option>
+          {% for category in categories %}
+          <option value="{{ category.category }}"
+            >{{ category.category }}</option
+          >
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+    <!-- Recipe Name -->
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="fas fa-utensils prefix"></i>
+        <input
+          id="recipe_name"
+          name="recipe_name"
+          type="text"
+          minlength="5"
+          maxlength="100"
+          class="validate"
+          required
+        />
+        <label for="icon_prefix">Recipe Name</label>
+      </div>
+    </div>
+    <!-- Recipe Ingredients -->
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="fas fa-egg prefix"></i>
+        <input
+          id="recipe_ingredients"
+          name="recipe_ingredients"
+          type="text"
+          minlength="5"
+          maxlength="400"
+          class="validate"
+          required
+        />
+        <label for="icon_prefix">Recipe Ingredients</label>
+      </div>
+    </div>
+    <!-- Recipe Method -->
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="fas fa-book-open prefix"></i>
+        <textarea
+          id="recipe_method"
+          name="recipe_method"
+          minlength="150"
+          maxlength="800"
+          class="materialize-textarea validate"
+          required
+        ></textarea>
+        <label for="icon_prefix">Recipe Method</label>
+      </div>
+    </div>
+
+    <!-- Image URL 
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="fas fa-egg prefix"></i>
+            <input
+              id="image_url"
+              name="image_url"
+              type="text"
+              minlength="5"
+              maxlength="500"
+              pattern="^[a-zA-Z0-9]{5,15}$"
+              class="validate"
+              required
+            />
+            <label for="icon_prefix">image_url</label>
+          </div>
+        </div>-->
+
+    <!-- Submit Recipe Button -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <button type="submit" class="col s12 btn-large red lighten-2">
+          Edit Recipe
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+{% endblock %}
