@@ -103,7 +103,7 @@ def add_recipe():
             "created_by": session["user"]
         }
 
-        mongo.db.tasks.insert_one(recipe)
+        mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
         return redirect(url_for("find_recipe"))
 
