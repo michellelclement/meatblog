@@ -1,10 +1,13 @@
 {% extends "base.html" %} {% block content %}
 
 <div class="row">
-<div class="col">
-<h2>Sign up</h2>
-<p>Share your recipes with the community! Sign up below and start posting. It's that simple.</p>
-</div>
+  <div class="col">
+    <h2>Sign up</h2>
+    <p>
+      Share your recipes with the community! Sign up below and start posting.
+      It's that simple.
+    </p>
+  </div>
 </div>
 <div class="row">
   <form class="col s12" method="POST" action="{{ url_for('sign_up') }}">
@@ -12,8 +15,17 @@
       <!-- Username -->
       <div class="row">
         <div class="input-field col s12">
-          <i class="far fa-user-circle prefix"></i></i>
-          <input id="username" name="username" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9{5, 15}$" class="validate" required/>
+          <i class="far fa-user-circle prefix"></i>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            minlength="5"
+            maxlength="15"
+            pattern="^[a-zA-Z0-9]{5,15}$"
+            class="validate"
+            required
+          />
           <label for="icon_prefix">Username</label>
         </div>
       </div>
@@ -21,14 +33,25 @@
       <div class="row">
         <div class="input-field col s12">
           <i class="fas fa-unlock prefix"></i>
-          <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9{5, 15}$" class="validate" required/>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            minlength="5"
+            maxlength="15"
+            pattern="^[a-zA-Z0-9]{5,15}$"
+            class="validate"
+            required
+          />
           <label for="password">Password</label>
         </div>
       </div>
 
       <!-- Register -->
       <div class="row">
-        <button type="submit" class="col s12 btn-large red lighten-2">Sign Up</button>
+        <button type="submit" class="col s12 btn-large red lighten-2">
+          Sign Up
+        </button>
       </div>
     </div>
   </form>
