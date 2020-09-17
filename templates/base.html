@@ -43,11 +43,11 @@
               <li><a href="#">Manage Recipes</a></li>
               {% else %}
               <li><a href="#">About</a></li>
-              <li><a href="#">Order Meat</a></li>
               {% endif %}
               {% if session.user %}
+              <li><a href="#">Order Meat</a></li>
               <li>
-                <a href="#" class="waves-effect waves-light btn red lighten-2"
+                <a href="{{ url_for('sign_out') }}" class="waves-effect waves-light btn red lighten-2"
                   >Sign Out</a
                 >
               </li>
@@ -79,6 +79,11 @@
       <li><a href="#">Manage Recipes</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Order Fresh Meat</a></li>
+      <li>
+                <a href="{{ url_for('sign_out') }}" class="waves-effect waves-light btn red lighten-2"
+                  >Sign Out</a
+                >
+              </li>
       <li>
         <a href="{{ url_for('sign_up') }}" class="waves-effect waves-light btn"
           >Sign Up</a

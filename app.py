@@ -81,7 +81,15 @@ def sign_in():
             return redirect(url_for("sign_in"))
 
     return render_template("sign_in.html")
-        
+
+# Log out function
+@app.route("/sign_out")
+def sign_out():
+    # Remove user from session cookies
+    flash("You have been signed out")
+    session.pop("user")
+    return redirect(url_for("sign_in"))
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
