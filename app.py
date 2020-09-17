@@ -23,9 +23,11 @@ def find_recipe():
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
+
 @app.route("/home")
 def home():
     return render_template("index.html")
+
 
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
@@ -47,8 +49,38 @@ def sign_up():
         # Put user into a session cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
-        
+
     return render_template("sign_up.html")
+
+
+# Log in Function
+app.route("/sign_in", methods=["GET", "POST"])
+def sign_in():
+    if request.method == "POST":
+        # Check to see if username already exists in db
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            # ensure hashed password matches user input
+            if check_password_hash(
+                    existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
+                    request.form.get("username")))
+                # below to be added after profile page is created - redirect user to their profile
+                return redirect(url_for("recipe", username=session["user"]))
+            else:
+                # invalid password match
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("sign_in"))
+
+        else:
+            # username doesn't exist
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("sign_in"))
+
+    return render_template("sign_in.html")
 
 
 if __name__ == "__main__":
