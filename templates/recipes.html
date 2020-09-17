@@ -9,21 +9,25 @@
 <ul class="collapsible">
   {% for recipe in recipes %}
   <li>
-    <div class="collapsible-header white-text red lighten-3">
-      <div class="col s9">
-        <i class="fas fa-utensils"></i>{{ recipe.recipe_name }} : {{
+  <div class="row recipes collapsible-header white-text red lighten-3">
+      <div class="col s7">
+        <h5><i class="fas fa-utensils"></i>{{ recipe.recipe_name }}</h5> {{
         recipe.category }}
         <p><em>by: {{ recipe.created_by }}</em></p>
       </div>
-      <div class="col s3">
+      <div class="col s6 recipe-buttons right-align">
+        <a href="#" class="waves-effect waves-light btn view-btn red lighten-5"
+          >View Recipe</a
+        >
         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn red lighten-2"
           >Edit Recipe</a
         >
-        <a href="#" class="waves-effect waves-light btn red lighten-2"
+        <a href="#" class="waves-effect waves-light btn red lighten-1"
           >Delete Recipe</a
         >
       </div>
     </div>
+
 
     <div class="col s9"></div>
     <div class="collapsible-body"><span>{{ recipe.recipe_method }}</span></div>
