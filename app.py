@@ -91,6 +91,25 @@ def sign_out():
     return redirect(url_for("sign_in"))
 
 
+# Add a Recipe Function
+@app.route("/add_recipe", methods=["GET", "POST"])
+def add_recipe():
+    if request.method == "POST":
+        recipe = {
+            "category": request.form.get("category"),
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_ingredients": request.form.get("recipe_ingredients"),
+            "recipe_method": request.form.get("recipe_method"),
+            "created_by": session["user"]
+        }
+
+        mongo.db.tasks.insert_one(recipe)
+        flash("Recipe Successfully Added")
+        return redirect(url_for("find_recipe"))
+
+    return render_template("add_recipe.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

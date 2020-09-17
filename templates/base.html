@@ -39,7 +39,7 @@
             <ul class="right hide-on-med-and-down">
               <li><a href="{{ url_for('find_recipe') }}">Find Recipe</a></li>
               {% if session.user %}
-              <li><a href="#">Add Recipe</a></li>
+              <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
               <li><a href="#">Manage Recipes</a></li>
               {% else %}
               <li><a href="#">About</a></li>
@@ -75,7 +75,7 @@
     <!-- Mobile Nav Bar -->
     <ul class="sidenav" id="mobile-demo">
       <li><a href="{{ url_for('find_recipe') }}">Find a Recipe</a></li>
-      <li><a href="#">Add a Recipe</a></li>
+      <li><a href="{{ url_for('add_recipe') }}">Add a Recipe</a></li>
       <li><a href="#">Manage Recipes</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Order Fresh Meat</a></li>

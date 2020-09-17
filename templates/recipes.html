@@ -1,18 +1,31 @@
 {% extends "base.html" %} {% block content %}
 
-<h1>Find a Recipe</h1>
+<div class="col">
+  <div class="row">
+    <h1>Find a Recipe</h1>
+  </div>
+</div>
 
 <ul class="collapsible">
   {% for recipe in recipes %}
   <li>
     <div class="collapsible-header white-text red lighten-3">
-      <div class="col s3">
+      <div class="col s9">
         <i class="fas fa-utensils"></i>{{ recipe.recipe_name }} : {{
         recipe.category }}
       </div>
+      <div class="col s3">
+        <a href="#" class="waves-effect waves-light btn red lighten-2"
+          >Edit Recipe</a
+        >
+        <a href="#" class="waves-effect waves-light btn red lighten-2"
+          >Delete Recipe</a
+        >
+      </div>
     </div>
+
     <div class="col s9"></div>
-    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    <div class="collapsible-body"><span>{{ recipe.recipe_method }}</span></div>
   </li>
   {% endfor %}
 </ul>
