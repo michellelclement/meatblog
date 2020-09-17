@@ -1,10 +1,13 @@
 {% extends "base.html" %} {% block content %}
 
-<div class="row">
-  <div class="col">
-    <h2>Sign In</h2>
-    <p> Sign in to your account to update your recipes, or to share new recipes.
-    </p>
+<div class="container center-align">
+  <div class="row">
+    <div class="col s12">
+      <h1>Sign In</h1>
+      <p>
+        Sign in to your account to update your recipes, or to share new recipes.
+      </p>
+    </div>
   </div>
 </div>
 <div class="row">
@@ -58,8 +61,9 @@
 <!-- New here? Sign up -->
 <div class="row">
   <div class="col s12">
-    <p class="center-align">New here?<a href="{{ url_for('sign_up') }}"
-        > Sign up here</a></p>
+    <p class="center-align">
+      New here?<a href="{{ url_for('sign_up') }}"> Sign up here</a>
+    </p>
   </div>
 </div>
 

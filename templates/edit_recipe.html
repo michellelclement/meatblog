@@ -1,8 +1,10 @@
 {% extends "base.html" %} {% block content %}
 
-<div class="col">
-  <div class="row">
-    <h1>Edit Recipe</h1>
+<div class="container center-align">
+  <div class="col">
+    <div class="row">
+      <h1>Edit Recipe</h1>
+    </div>
   </div>
 </div>
 
@@ -76,7 +78,9 @@
           maxlength="800"
           class="materialize-textarea validate"
           required
-        >{{- recipe.recipe_method -}}</textarea>
+        >
+{{- recipe.recipe_method -}}</textarea
+        >
         <label for="icon_prefix">Recipe Method</label>
       </div>
     </div>
@@ -106,9 +110,17 @@
           Edit Recipe
         </button>
         <!-- Cancel Button -->
-        <a href="{{ url_for('find_recipe') }}" class="col s4 btn-large red lighten-2">Cancel</a>
+        <a
+          href="{{ url_for('find_recipe') }}"
+          class="col s4 btn-large red lighten-2"
+          >Cancel</a
+        >
         <!-- Delete Recipe Button -->
-        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="col s4 btn-large red lighten-1">Delete Recipe</a>
+        <a
+          href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+          class="col s4 btn-large red lighten-1"
+          >Delete Recipe</a
+        >
       </div>
     </div>
   </form>

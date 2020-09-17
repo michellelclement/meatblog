@@ -139,6 +139,12 @@ def delete_recipe(recipe_id):
     return redirect(url_for("find_recipe"))
 
 
+# View Recipe
+@app.route("/view_recipe")
+def view_recipe():
+    return render_template("view_recipe.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
