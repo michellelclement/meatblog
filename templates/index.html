@@ -1,7 +1,6 @@
 {% extends "base.html" %} {% block content %}
 
 <div class="row">
-  
   <div class="col m6 s12">
     <div class="card-panel">
       <img
@@ -11,15 +10,36 @@
     </div>
   </div>
 
-  <div class="col m6 s12">
+  <div class="col m6 s12 homepage-sml-img">
     <div class="card-panel">
       <img
         class="responsive-img"
         src="https://www.kitchensanctuary.com/wp-content/uploads/2016/06/Crispy-Chicken-Wings-with-Sticky-Asian-Glaze-tall-FS.webp"
       />
+      <div homepage-sml-text>
+        <h2>Publish Your Own Recipes To The Community</h2>
+      </div>
     </div>
   </div>
+</div>
 
+
+<!-- About Row -->
+
+<div class="row" id="about">
+    <div class="col s6 about">
+        <h2>About Meatblog</h2>
+        <p>Meatblog is a Meat based recipe website providing tasty meaty meals for all the family.<br>Recipes have been submitted by our community of cooking enthusiasts. </p>
+        <p>Do you have a tasty recipe you want to share with others?<br>Click the button below.</p>
+        <a href="{{ url_for('sign_in') }}" class="waves-effect waves-light btn red lighten-2">Sign In</a>
+    </div>
+
+    <div class="col s6 fresh-meat">
+        <h2>Fresh Meat Delivered To Your Door</h2>
+        <p>Looking for some high quality, fresh meat for your recipes?<br>Look no further than MeatBox.</p>
+        <p>Simply add the items you wish to your box<br>and place your order for delivery.</p>
+        <a href="https://meatboxlondon.co.uk/" target="_blank" class="waves-effect waves-light btn red lighten-2">Sign In</a>
+    </div>
 </div>
 
 {% endblock %}

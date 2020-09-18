@@ -3,7 +3,7 @@
 <div class="container center-align">
 <div class="col s12">
   <div class="row">
-    <h1>Recipe Name</h1>
+    <h1>"{{ recipe.recipe_name }}"</h1>
   </div>
 </div>
 </div>
@@ -11,11 +11,10 @@
   <div class="col m6 s12">
     <div class="card-panel">
       <h2>Ingredients</h2>
+      <p>{{ recipe.recipe_ingredients }}</p>
       <h2>Method</h2>
       <p>
-        I am a very simple card. I am good at containing small bits of
-        information. I am convenient because I require little markup to use
-        effectively. I am similar to what is called a panel in other frameworks.
+        {{ recipe.recipe_method }}
       </p>
       <h3>Recipe posted by:</h3>
       <h4>Recipe posted on:</h4>
@@ -30,5 +29,7 @@
       />
     </div>
   </div>
-</div>
+</div> 
+
+
 {% endblock %}

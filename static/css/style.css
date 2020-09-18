@@ -60,6 +60,23 @@ h4 {
     margin: 5px;
 }
 
+
+/* Homepage */
+
+.homepage-sml-img {
+    position: relative;
+}
+
+.homepage-sml-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    overflow-wrap: normal;
+}
+
+
 /* Recipe Page */
 
 .recipes h5 {
