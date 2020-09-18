@@ -18,7 +18,7 @@
       </div>
       <div class="col s6 recipe-buttons left-align">
         <a
-          href="{{ url_for('view_recipe') }}"
+          href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"
           class="waves-effect waves-light btn view-btn red lighten-5"
           >View Recipe</a
         >
