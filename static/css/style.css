@@ -1,8 +1,9 @@
-html, body {
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Open Sans', sans-serif;
+html,
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Open Sans", sans-serif;
 }
 
 h1,
@@ -11,76 +12,126 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Playfair Display', serif;
-    color: #383838;
+  font-family: "Playfair Display", serif;
+  color: #383838;
+}
+
+h1 {
+  font-size: 3.5rem;
 }
 
 h2 {
-    font-size: 2.56rem;
+  font-size: 2.56rem;
 }
 
 h3 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 h4 {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .container {
-    width: 95%;
+  width: 95%;
 }
 
 /* Flashes */
 .flashes h3 {
-    line-height: 4;
+  line-height: 4;
 }
 
 /* Navigation Styling */
 .navigation-bar {
-    width: 90%;
-    margin: 0 auto;
-    font-family: 'Open Sans';
+  width: 90%;
+  margin: 0 auto;
+  font-family: "Open Sans";
 }
 
 .nav-wrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .logo {
-    height: 50px;
+  height: 50px;
 }
 
 .view-btn {
-    color: 383838;
+  color: 383838;
 }
 
 .collapsible-header .btn {
-    margin: 5px;
+  margin: 5px;
 }
-
 
 /* Homepage */
 
+/* Main Image */
+.main-image {
+  position: relative;
+  text-align: center;
+}
+
+#main-image-text {
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 50px;
+  background-color: white;
+  padding: 10px 20px;
+}
+
+#main-image-text h1 {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+#main-image-text h2 {
+  font-size: 2rem;
+  margin-top: 0px;
+}
+
+/* Side Image */
+
 .homepage-sml-img {
-    position: relative;
+  position: relative;
+  text-align: center;
 }
 
-.homepage-sml-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    overflow-wrap: normal;
+.small-image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  }
+
+#bottom-right-image {
+  margin-top: 15px;
 }
 
+/* Homepage - About Section */
+
+#about {
+  background-color: #eeeeee;
+  padding: 20px 30px;
+}
+
+#about-fresh-meat {
+  background-color: #e0e0e0;
+  padding: 20px 30px;
+}
+
+.about-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 /* Recipe Page */
 
 .recipes h5 {
-    color: white;
+  color: white;
 }
-
-
