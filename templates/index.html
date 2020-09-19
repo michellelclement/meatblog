@@ -1,5 +1,6 @@
 {% extends "base.html" %} {% block content %}
 
+<!-- Main Homepage Image -->
 <div class="row">
   <div class="col m8 s12 main-image">
     <img
@@ -9,30 +10,36 @@
     <div id="main-image-text" class="left-align">
       <h1>Tasty meat based recipes</h1>
       <h2>Cook, Submit, Share</h2>
+      <a
+        href="{{ url_for('find_recipe') }}"
+        class="waves-effect waves-light btn red lighten-2 about-btn"
+        >Find a Recipe</a
+      >
     </div>
   </div>
 
   <!-- Top right Image Box - top -->
 
   <div class="col m4 s6 homepage-sml-img">
-    <img
-      class="responsive-img"
-      src="{{ url_for('static', filename='css/images/homepage_image.jpg') }}"
-    />
-    <div class="small-image-text left-align">
-      <h3>Upload your own</h3>
-    </div>
+    <a href="{{ url_for('sign_up') }}"
+      ><img
+        class="responsive-img"
+        src="{{ url_for('static', filename='css/images/homepage_image.jpg') }}"
+      />
+      <div class="small-image-text center-align">
+        <h3>Publish your own recipes to the community</h3>
+      </div></a
+    >
   </div>
 
-
-<!-- Top right Image Box - bottom -->
-<div class="col m4 s6 homepage-sml-img" id="bottom-right-image">
+  <!-- Top right Image Box - bottom -->
+  <div class="col m4 s6 homepage-sml-img" id="bottom-right-image">
     <img
       class="responsive-img"
-      src="{{ url_for('static', filename='css/images/homepage_image.jpg') }}"
+      src="{{ url_for('static', filename='css/images/meatbox.png') }}"
     />
-    <div class="small-image-text left-align">
-      <h3>Upload your own</h3>
+    <div class="small-image-text center-align">
+      <h3>Order fresh meat delivered to your door</h3>
     </div>
   </div>
 </div>
@@ -54,7 +61,7 @@
     >
   </div>
 
-  <div class="col m6 s12 about-content" id="about-fresh-meat">
+  <div class="col m6 s12" id="about-fresh-meat">
     <h2>Fresh Meat Delivered To You</h2>
     <p flow-text>
       Looking for some high quality, fresh meat for your recipes?<br />
@@ -71,4 +78,37 @@
     >
   </div>
 </div>
+
+<!-- Recipe of the Month -->
+
+<div class="row recipe-of-month">
+  <div class="col m8 s12 main-image">
+    <img
+      class="responsive-img"
+      src="{{ url_for('static', filename='css/images/homepage_image.jpg') }}"
+    />
+  </div>
+
+  <div class="col s12 m4">
+  <h2>Recipe of the Month</h2>
+<h3>Recipe name</h3>
+<h4>Ingredients</h4>
+<p></p>
+<h4>Method</h4>
+<p>Method info</p>
+  </div>
+</div>
+
+<!-- Submit Your Own Recipe -->
+<div class="col s12 center-align submit-recipe-section">
+<h1>Submit your own recipe</h1>
+<p>Do you have a tasty, meat based recipe you would like to share?<br>Create an account quickly and for free and post away!</p>
+<a
+      href="{{ url_for('sign_up') }}"
+      class="waves-effect waves-light btn red lighten-2 about-btn"
+      >Sign up</a
+    >
+</div>
+
+
 {% endblock %}
