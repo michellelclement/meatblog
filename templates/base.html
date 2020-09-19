@@ -31,7 +31,10 @@
         <nav class="sidenav-trigger red lighten-3">
           <div class="nav-wrapper">
             <a href="{{ url_for('home') }}">
-              <img class="logo" src="{{ url_for('static', filename='css/images/logo.png') }}" alt="Meatblog"
+              <img
+                class="logo"
+                src="{{ url_for('static', filename='css/images/logo.png') }}"
+                alt="Meatblog"
             /></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right"
               ><i class="fas fa-bars"></i
@@ -44,7 +47,11 @@
               {% else %}
               <li><a href="#">About</a></li>
               {% endif %} {% if session.user %}
-              <li><a href="https://meatboxlondon.co.uk/" target="_blank">Order Meat</a></li>
+              <li>
+                <a href="https://meatboxlondon.co.uk/" target="_blank"
+                  >Order Meat</a
+                >
+              </li>
               <li>
                 <a
                   href="{{ url_for('sign_out') }}"
@@ -121,6 +128,27 @@
     <main class="container">
       {% block content %} {% endblock %}
     </main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">© Michelle L Clement 2020</h5>
+            <p class="grey-text text-lighten-4">
+              Website Designed & Built by Michelle L Clement
+            </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Follow us on socials</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://www.twitter.com/" target="_blank">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Scripts -->
     <script

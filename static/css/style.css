@@ -107,7 +107,12 @@ h4 {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  }
+}
+
+.small-image-text h3 {
+  margin: 5px;
+  padding: px;
+}
 
 #bottom-right-image {
   margin-top: 15px;
@@ -117,17 +122,38 @@ h4 {
 
 #about {
   background-color: #eeeeee;
-  padding: 20px 30px;
+  padding: 50px 30px;
+}
+
+#about-section {
+  padding: 50px 0px;
 }
 
 #about-fresh-meat {
   background-color: #e0e0e0;
-  padding: 20px 30px;
+  padding: 50px 30px;
 }
 
 .about-btn {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.recipe-of-month {
+  margin-bottom: 70px;
+}
+
+.submit-recipe-section {
+  padding: 50px 30px;
+  background-color: #eeeeee;
+  margin-bottom: 50px;
+}
+
+footer {
+  background-color: #fb9496;
+  width: 90%;
+  margin: 0 auto;
+  font-family: "Open Sans";
 }
 
 /* Recipe Page */
