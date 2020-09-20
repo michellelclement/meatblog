@@ -48,7 +48,8 @@ def sign_up():
 
         # Put user into a session cookie
         session["user"] = request.form.get("username").lower()
-        flash("Registration Successful!")
+        flash("Registration Successful! You can now share your own recipes to the website!")
+        return redirect(url_for("home", username=session["user"]))
 
     return render_template("sign_up.html")
 

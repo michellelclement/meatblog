@@ -177,6 +177,7 @@ footer {
   width: 90%;
   margin: 0 auto;
   font-family: "Open Sans";
+  margin-top: 100px;
 }
 
 /* Recipe Page */
@@ -184,6 +185,8 @@ footer {
 .recipes h5 {
   color: white;
 }
+
+/* Edit Page */
 
 /* Media Queries */
 
