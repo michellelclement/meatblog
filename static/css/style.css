@@ -57,12 +57,26 @@ h4 {
   height: 50px;
 }
 
+#sign-in-btn {
+  color: 383838;
+}
+
 .view-btn {
   color: 383838;
 }
 
 .collapsible-header .btn {
   margin: 5px;
+}
+
+/* Mobile Menu */
+
+#mobile-demo {
+    padding-top: 50px;
+}
+
+#mobile-demo li {
+    padding: 10px;
 }
 
 /* Homepage */

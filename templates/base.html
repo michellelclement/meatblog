@@ -43,7 +43,6 @@
               <li><a href="{{ url_for('find_recipe') }}">Find Recipe</a></li>
               {% if session.user %}
               <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-              <li><a href="#">Manage Recipes</a></li>
               {% else %}
               <li><a href="#">About</a></li>
               {% endif %} {% if session.user %}
@@ -70,7 +69,8 @@
               <li>
                 <a
                   href="{{ url_for('sign_in') }}"
-                  class="waves-effect waves-light btn red lighten-2"
+                  class="waves-effect waves-light btn red lighten-5"
+                  id="sign-in-btn"
                   >Sign In</a
                 >
               </li>
@@ -82,14 +82,15 @@
     </div>
     <!-- Mobile Nav Bar -->
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="{{ url_for('find_recipe') }}">Find a Recipe</a></li>
+      <li><a href="{{ url_for('find_recipe') }}">Find Recipe</a></li>
       {% if session.user %}
-      <li><a href="{{ url_for('add_recipe') }}">Add a Recipe</a></li>
-      <li><a href="#">Manage Recipes</a></li>
+      <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
       {% else %}
       <li><a href="#">About</a></li>
-      <li><a href="#">Order Fresh Meat</a></li>
       {% endif %} {% if session.user %}
+      <li>
+        <a href="https://meatboxlondon.co.uk/" target="_blank">Order Meat</a>
+      </li>
       <li>
         <a
           href="{{ url_for('sign_out') }}"
@@ -99,14 +100,17 @@
       </li>
       {% else %}
       <li>
-        <a href="{{ url_for('sign_up') }}" class="waves-effect waves-light btn"
+        <a
+          href="{{ url_for('sign_up') }}"
+          class="waves-effect waves-light btn red lighten-2"
           >Sign Up</a
         >
       </li>
       <li>
         <a
           href="{{ url_for('sign_in') }}"
-          class="waves-effect waves-light btn red lighten-2"
+          class="waves-effect waves-light btn red lighten-5"
+          id="sign-in-btn"
           >Sign In</a
         >
       </li>
@@ -141,9 +145,30 @@
           <div class="col l4 offset-l2 s12">
             <h5 class="white-text">Follow us on socials</h5>
             <ul>
-              <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/" target="_blank">Instagram</a></li>
-              <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/" target="_blank">Facebook</a></li>
-              <li><a class="grey-text text-lighten-3" href="https://www.twitter.com/" target="_blank">Twitter</a></li>
+              <li>
+                <a
+                  class="grey-text text-lighten-3"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  class="grey-text text-lighten-3"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  class="grey-text text-lighten-3"
+                  href="https://www.twitter.com/"
+                  target="_blank"
+                  >Twitter</a
+                >
+              </li>
             </ul>
           </div>
         </div>
