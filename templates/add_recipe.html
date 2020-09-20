@@ -72,23 +72,22 @@
       </div>
     </div>
 
-    <!-- Image URL 
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="fas fa-egg prefix"></i>
-            <input
-              id="image_url"
-              name="image_url"
-              type="text"
-              minlength="5"
-              maxlength="500"
-              pattern="^[a-zA-Z0-9]{5,15}$"
-              class="validate"
-              required
-            />
-            <label for="icon_prefix">image_url</label>
-          </div>
-        </div>-->
+    <!-- Upload Image -->
+
+    <div class="row">
+    <div class="col s12">
+<h4>Upload an image to go with your reicipe</h4>
+    </div>
+    </div>
+<div class="row">
+      <div class="input-field col s12">
+        <form action="/action_page.php">
+          <label for="myfile">Select your image:</label><br/><br/>
+          <input type="file" id="myfile" name="myfile"/><br/><br/>
+          <input type="Upload image"/>
+        </form>
+      </div>
+    </div>
 
     <!-- Submit Recipe Button -->
     <div class="row">
