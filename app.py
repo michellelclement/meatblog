@@ -68,6 +68,7 @@ def sign_in():
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(
                     request.form.get("username")))
+                return redirect(url_for("home", username=session["user"]))
                 # below to be added after profile page is created - redirect user to their profile
                 # return redirect(url_for("profile", username=session["user"]))
             else:
