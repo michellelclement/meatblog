@@ -1,26 +1,34 @@
 {% extends "base.html" %} {% block content %}
 
 <div class="container center-align">
-<div class="col s12">
-  <div class="row">
-    <h1>"{{ recipe.recipe_name }}"</h1>
+  <div class="col s12">
+    <div class="row">
+      <h1>"{{ recipe.recipe_name }}"</h1>
+    </div>
   </div>
-</div>
 </div>
 <div class="row">
   <div class="col m6 s12">
     <div class="card-panel">
       <h2>Ingredients</h2>
-      <p>{{ recipe.recipe_ingredients }}</p>
+      {% for ingredient in recipe.recipe_ingredients.splitlines() %}
+      <p>{{ ingredient }}</p>
+      {% endfor %}
       <h2>Method</h2>
-      <p>
-        {{ recipe.recipe_method }}
-      </p>
-      <h3>Recipe posted by:</h3>
-      <h4>Recipe posted on:</h4>
+      {% for method in recipe.recipe_method.splitlines() %}
+      <p>{{ method }}</p>
+      {% endfor %}
+      <div id="recipe-by">
+        <h3>Recipe posted by: {{ recipe.created_by }}</h3>
+        <h4>Recipe posted on: {{ recipe.date_time }}</h4>
+        <!-- Share Buttons, from sharethis.com -->
+        <h4>Share this recipe</h4>
+        <div class="sharethis-inline-share-buttons"></div>
+      </div>
     </div>
   </div>
 
+  <!-- Recipe Image -->
   <div class="col m6 s12">
     <div class="card-panel">
       <img
@@ -29,7 +37,6 @@
       />
     </div>
   </div>
-</div> 
-
+</div>
 
 {% endblock %}

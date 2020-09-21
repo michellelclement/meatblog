@@ -44,18 +44,20 @@
     <div class="row">
       <div class="input-field col s12">
         <i class="fas fa-egg prefix"></i>
-        <input
-          id="recipe_ingredients"
+        <textarea
           name="recipe_ingredients"
-          type="text"
-          minlength="5"
-          maxlength="400"
-          class="validate"
-          required
-        />
+          id="recipe_ingredients"
+          cols="1"
+          rows="15"
+          class="materialize-textarea validate"
+        ></textarea>
         <label for="icon_prefix">Recipe Ingredients</label>
+        <span class="helper-text" data-error="wrong" data-success="right"
+          >Add each ingredient on a new line.</span
+        >
       </div>
     </div>
+
     <!-- Recipe Method -->
     <div class="row">
       <div class="input-field col s12">
@@ -63,32 +65,17 @@
         <textarea
           id="recipe_method"
           name="recipe_method"
-          minlength="150"
-          maxlength="800"
+          cols="1"
+          rows="15"
           class="materialize-textarea validate"
           required
         ></textarea>
         <label for="icon_prefix">Recipe Method</label>
+        <span class="helper-text" data-error="wrong" data-success="right"
+          >Add each step in the recipe on a new line.</span
+        >
       </div>
     </div>
-
-    <!-- Upload Image -->
-
-    <div class="row">
-    <div class="col s12">
-<h4>Upload an image to go with your reicipe</h4>
-    </div>
-    </div>
-<div class="row">
-      <div class="input-field col s12">
-        <form action="/action_page.php">
-          <label for="myfile">Select your image:</label><br/><br/>
-          <input type="file" class="cloudinary-fileupload" id="file" name="file data-cloudinary-field"/><br/><br/>
-          <input type="submit">
-        </form>
-      </div>
-    </div>
-
 
     <!-- Submit Recipe Button -->
     <div class="row">
