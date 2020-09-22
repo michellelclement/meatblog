@@ -129,9 +129,32 @@
       {% endfor %} {% endif %} {% endwith %}
     </section>
 
+
+<!-- Modal Structure -->
+      <div id="modal1" class="modal">
+        <div class="modal-content-container">
+          <div class="modal-content">
+            <h4>Are you sure you want to delete?</h4>
+            <p>
+              If you delete your recipe, this can not be undone.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a
+              href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+              class="modal-close btn-large red lighten-1"
+              >Delete Recipe</a
+            >
+            <a class="modal-close btn-large red lighten-2">Cancel</a>
+          </div>
+        </div>
+      </div>
+      
     <main class="container">
       {% block content %} {% endblock %}
     </main>
+
+
 
     <footer class="page-footer">
       <div class="container">
@@ -182,7 +205,11 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://platform-api.sharethis.com/js/sharethis.js#property=5f68bb81a86c6e0012411206&product=inline-share-buttons" type="text/javascript" async="async"></script>
+    <script
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=5f68bb81a86c6e0012411206&product=inline-share-buttons"
+      type="text/javascript"
+      async="async"
+    ></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %} {% endblock %}
   </body>
