@@ -7,8 +7,9 @@
     </div>
   </div>
 </div>
-<div class="row">
-  <div class="col m6 s12">
+
+<div class="row recipe_details">
+  <div class="col m6 s12 recipe-info-text">
     <div class="card-panel">
       <h2>Ingredients</h2>
       {% for ingredient in recipe.recipe_ingredients.splitlines() %}
@@ -29,7 +30,7 @@
   </div>
 
   <!-- Recipe Image -->
-  <div class="col m6 s12">
+  <div class="col m6 s12 recipe-image">
     <div class="card-panel">
       <img
         class="responsive-img"

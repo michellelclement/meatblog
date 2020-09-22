@@ -215,11 +215,24 @@ footer {
 
 .small-image-text h3 {
 font-size: 1rem;
-
 }
 
 .homepage-sml-img  {
   margin-top: 15px;
 }
+
+/* View Recipe Page */
+
+.recipe_details {
+    display: flex;
+    flex-direction: column; 
+  }
+  .recipe-image {
+    order: 1; 
+  }
+
+  .recipe-info-text {
+      order: 2;
+  }
 
 }
