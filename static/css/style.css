@@ -41,6 +41,12 @@ h4 {
   line-height: 4;
 }
 
+/* Modal */
+
+.modal-content-container {
+    margin: 30px;
+}
+
 /* Navigation Styling */
 .navigation-bar {
   width: 90%;
@@ -192,7 +198,7 @@ footer {
     padding: 20px 0px;
 }
 
-/* Edit Page */
+
 
 /* Media Queries */
 
