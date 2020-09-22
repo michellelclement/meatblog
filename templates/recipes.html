@@ -30,8 +30,7 @@
         >
         <a
           href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-          class="waves-effect waves-light btn red lighten-1 modal-trigger"
-          href="#modal1"
+          class="waves-effect waves-light btn red lighten-1"
           >Delete Recipe</a
         >
         {% endif %}
@@ -43,18 +42,6 @@
   </li>
   {% endfor %}
 </ul>
-
-
-    <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Are you sure you want to delete?</h4>
-      <p>If you select delete you will not be able to undo this.</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat modal-close">Agree</a>
-    </div>
-  </div>
 
   
 {% endblock %}
