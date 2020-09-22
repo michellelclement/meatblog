@@ -106,4 +106,24 @@
   </form>
 </div>
 
+<!-- Modal Structure -->
+      <div id="modal1" class="modal">
+        <div class="modal-content-container">
+          <div class="modal-content">
+            <h4>Are you sure you want to delete?</h4>
+            <p>
+              If you delete your recipe, this can not be undone.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a
+              href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+              class="modal-close btn-large red lighten-1"
+              >Delete Recipe</a
+            >
+            <a class="modal-close btn-large red lighten-2">Cancel</a>
+          </div>
+        </div>
+      </div>
+      
 {% endblock %}
