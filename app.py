@@ -102,6 +102,7 @@ def add_recipe():
             "recipe_name": request.form.get("recipe_name"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_method": request.form.get("recipe_method"),
+            "image_url": request.form.get("image_url"),
             "created_by": session["user"]
         }
 

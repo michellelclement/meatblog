@@ -37,7 +37,7 @@
           class="validate"
           required
         />
-        <label for="icon_prefix">Recipe Name</label>
+        <label for="recipe_name">Recipe Name</label>
       </div>
     </div>
     <!-- Recipe Ingredients -->
@@ -51,7 +51,7 @@
           rows="15"
           class="materialize-textarea validate"
         ></textarea>
-        <label for="icon_prefix">Recipe Ingredients</label>
+        <label for="recipe_ingredients">Recipe Ingredients</label>
         <span class="helper-text" data-error="wrong" data-success="right"
           >Add each ingredient on a new line.</span
         >
@@ -70,9 +70,28 @@
           class="materialize-textarea validate"
           required
         ></textarea>
-        <label for="icon_prefix">Recipe Method</label>
+        <label for="recipe_method">Recipe Method</label>
         <span class="helper-text" data-error="wrong" data-success="right"
           >Add each step in the recipe on a new line.</span
+        >
+      </div>
+    </div>
+
+    <!-- Add an image -->
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="fas fa-images prefix"></i>
+        <input
+          id="image_url"
+          name="image_url"
+          type="text"
+          minlength="5"
+          class="validate"
+          required
+        />
+        <label for="image_url">Add an image</label>
+        <span class="helper-text" data-error="wrong" data-success="right"
+          >Add a URL for an image</span
         >
       </div>
     </div>
