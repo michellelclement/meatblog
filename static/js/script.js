@@ -4,3 +4,6 @@ $(document).ready(function(){
     $('select').formSelect();
     $('.modal').modal();
   });
+
+
+  document.getElementById('date_added').value = Date();
