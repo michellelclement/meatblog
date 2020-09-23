@@ -200,12 +200,21 @@ footer {
 
 /* Media Queries */
 
+@media only screen and (max-width: 600px) {
+.homepage-sml-img {
+    margin-top: 15px;
+  }
+
+}
+
+
 @media only screen and (max-width: 768px) {
   .main-image-row {
     margin-top: 30px;
     margin-bottom: 0px;
   }
-  #main-image-text h1 {
+
+#main-image-text h1 {
     font-size: 2.3rem;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -218,6 +227,10 @@ footer {
 
   .small-image-text h3 {
     font-size: 1rem;
+  }
+
+  .recipe-month-section {
+      margin-top: 100px;
   }
 
   /* View Recipe Page */
@@ -235,9 +248,4 @@ footer {
   }
 }
 
-@media only screen and (max-width: 600px) {
-.homepage-sml-img {
-    margin-top: 15px;
-  }
 
-}
