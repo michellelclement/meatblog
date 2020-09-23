@@ -44,7 +44,7 @@ h4 {
 /* Modal */
 
 .modal-content-container {
-    margin: 30px;
+  margin: 30px;
 }
 
 /* Navigation Styling */
@@ -64,11 +64,11 @@ h4 {
 }
 
 #sign-in-btn {
-  color: 383838;
+  color: #383838;
 }
 
 .view-btn {
-  color: 383838;
+  color: #383838;
 }
 
 .collapsible-header .btn {
@@ -78,11 +78,11 @@ h4 {
 /* Mobile Menu */
 
 #mobile-demo {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
 #mobile-demo li {
-    padding: 10px;
+  padding: 10px;
 }
 
 /* Homepage */
@@ -90,7 +90,7 @@ h4 {
 /* Main Image */
 
 .main-image-row {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .main-image {
@@ -136,7 +136,7 @@ h4 {
 
 .small-image-text h3 {
   margin: 5px;
-  padding: px;
+  padding: 5px;
 }
 
 #bottom-right-image {
@@ -150,8 +150,14 @@ h4 {
   padding: 50px 30px;
 }
 
-#about-section {
+#about-row {
   padding: 50px 0px;
+
+}
+
+.about-section {
+
+
 }
 
 #about-fresh-meat {
@@ -169,7 +175,7 @@ h4 {
 }
 
 .recipe-of-month-image {
-    max-height: 600px;
+  max-height: 600px;
 }
 
 .submit-recipe-section {
@@ -195,50 +201,46 @@ footer {
 /* View Recipe Page */
 
 #recipe-by {
-    padding: 20px 0px;
+  padding: 20px 0px;
 }
-
-
 
 /* Media Queries */
 
 @media only screen and (max-width: 768px) {
-
-.main-image-row {
+  .main-image-row {
     margin-top: 30px;
     margin-bottom: 0px;
-}
-#main-image-text h1 {
+  }
+  #main-image-text h1 {
     font-size: 2.3rem;
     margin-top: 5px;
     margin-bottom: 5px;
-}
+  }
 
-#main-image-text h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
+  #main-image-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
 
-.small-image-text h3 {
-font-size: 1rem;
-}
+  .small-image-text h3 {
+    font-size: 1rem;
+  }
 
-.homepage-sml-img  {
-  margin-top: 15px;
-}
+  .homepage-sml-img {
+    margin-top: 15px;
+  }
 
-/* View Recipe Page */
+  /* View Recipe Page */
 
-.recipe_details {
+  .recipe_details {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
   }
   .recipe-image {
-    order: 1; 
+    order: 1;
   }
 
   .recipe-info-text {
-      order: 2;
+    order: 2;
   }
-
 }
