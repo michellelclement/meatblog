@@ -1,8 +1,8 @@
 {% extends "base.html" %} {% block content %}
 
 <div class="container center-align">
-  <div class="col">
     <div class="row">
+      <div class="col">
       <h1>Find a Recipe</h1>
     </div>
   </div>
@@ -14,7 +14,6 @@
     {% for recipe in recipes %}
     <li>
       <div class="row recipes collapsible-header white-text red lighten-3">
-        
         <div class="col s12 m3">
           <img class="responsive-img" src="{{ recipe.image_url }}" />
         </div>
@@ -37,12 +36,6 @@
             class="waves-effect waves-light btn red lighten-2"
             >Edit Recipe</a
           >
-          <!-- Delete Recipe Button -->
-          <a
-            href="#recipe-delete-modal"
-            class="waves-effect waves-light btn red lighten-1 modal-trigger"
-            >Delete Recipe</a
-          >
           {% endif %}
         </div>
       </div>
@@ -50,38 +43,20 @@
       <!-- Expandable Content -->
       <div class="col s9"></div>
       <div class="collapsible-body">
-        <span><h2>Ingredients</h2>
-      {% for ingredient in recipe.recipe_ingredients.splitlines() %}
-      <p>{{ ingredient }}</p>
-      {% endfor %}
-      <h2>Method</h2>
-      {% for method in recipe.recipe_method.splitlines() %}
-      <p>{{ method }}</p>
-      {% endfor %}</span>
+        <span
+          ><h2>Ingredients</h2>
+          {% for ingredient in recipe.recipe_ingredients.splitlines() %}
+          <p>{{ ingredient }}</p>
+          {% endfor %}
+          <h2>Method</h2>
+          {% for method in recipe.recipe_method.splitlines() %}
+          <p>{{ method }}</p>
+          {% endfor %}</span
+        >
       </div>
     </li>
-
-    <!-- Modal Structure -->
-    <div id="recipe-delete-modal" class="modal">
-      <div class="modal-content-container">
-        <div class="modal-content">
-          <h4>Are you sure you want to delete?</h4>
-          <p>
-            If you delete your recipe, this can not be undone.
-          </p>
-        </div>
-        <div class="modal-footer">
-          <a
-            href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-            class="modal-close btn-large red lighten-1"
-            >Delete Recipe</a
-          >
-          <a class="modal-close btn-large red lighten-2">Cancel</a>
-        </div>
-      </div>
-    </div>
-
     {% endfor %}
   </ul>
 </div>
+
 {% endblock %}
