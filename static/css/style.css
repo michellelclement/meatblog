@@ -145,30 +145,24 @@ h4 {
 
 /* Homepage - About Section */
 
-#about {
-  background-color: #eeeeee;
-  padding: 50px 30px;
+.about-container{
+  display: inline-flex;
+  width: 100%;
+  margin: 50px 0px;
 }
 
-#about-row {
-  padding: 50px 0px;
-
-}
-
-.about-section {
-
-
-}
-
-#about-fresh-meat {
-  background-color: #e0e0e0;
-  padding: 50px 30px;
+.about-col,
+.about-meatbox-col {
+  height: 100%;
+    max-height: 400px;
+    margin: auto;
+    width: 75%;
 }
 
 .about-btn {
-  margin-top: 20px;
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
+
 
 .recipe-of-month {
   margin-bottom: 70px;
