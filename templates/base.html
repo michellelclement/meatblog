@@ -24,100 +24,107 @@
     {% block styles %} {% endblock %}
     <title>Meatblog</title>
   </head>
-
-  <header>
-    <!--Main Nav Bar -->
-    <div class="row">
-      <div class="col-12 navigation-bar">
-        <nav class="sidenav-trigger red lighten-3">
-          <div class="nav-wrapper">
-            <a href="{{ url_for('home') }}">
-              <img
-                class="logo"
-                src="{{ url_for('static', filename='css/images/logo.png') }}"
-                alt="Meatblog"
-            /></a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"
-              ><i class="fas fa-bars"></i
-            ></a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="{{ url_for('find_recipe') }}">Find Recipe</a></li>
-              {% if session.user %}
-              <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-              {% else %}
-              <li><a href="{{ url_for('home', _anchor='about-section') }}">About</a></li>
-              {% endif %} {% if session.user %}
-              <li>
-                <a href="https://meatboxlondon.co.uk/" target="_blank"
-                  >Order Meat</a
-                >
-              </li>
-              <li>
-                <a
-                  href="{{ url_for('sign_out') }}"
-                  class="waves-effect waves-light btn red lighten-2"
-                  >Sign Out</a
-                >
-              </li>
-              {% else %}
-              <li>
-                <a
-                  href="{{ url_for('sign_up') }}"
-                  class="waves-effect waves-light btn red lighten-2"
-                  >Sign Up</a
-                >
-              </li>
-              <li>
-                <a
-                  href="{{ url_for('sign_in') }}"
-                  class="sign-in-btn waves-effect waves-light btn red lighten-5"
-                  >Sign In</a
-                >
-              </li>
-              {% endif %}
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </div>
-    <!-- Mobile Nav Bar -->
-    <ul class="sidenav" id="mobile-demo">
-      <li><a href="{{ url_for('find_recipe') }}">Find Recipe</a></li>
-      {% if session.user %}
-      <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-      {% else %}
-      <li><a href="{{ url_for('home', _anchor='about-section') }}">About</a></li>
-      {% endif %} {% if session.user %}
-      <li>
-        <a href="https://meatboxlondon.co.uk/" target="_blank">Order Meat</a>
-      </li>
-      <li>
-        <a
-          href="{{ url_for('sign_out') }}"
-          class="waves-effect waves-light btn red lighten-2"
-          >Sign Out</a
-        >
-      </li>
-      {% else %}
-      <li>
-        <a
-          href="{{ url_for('sign_up') }}"
-          class="waves-effect waves-light btn red lighten-2"
-          >Sign Up</a
-        >
-      </li>
-      <li>
-        <a
-          href="{{ url_for('sign_in') }}"
-          class="sign-in-btn waves-effect waves-light btn red lighten-5"
-          >Sign In</a
-        >
-      </li>
-      {% endif %}
-    </ul>
-  </header>
-
   <body>
+    <header>
+      <!--Main Nav Bar -->
+      <div class="row">
+        <div class="col-12 navigation-bar">
+          <nav class="sidenav-trigger red lighten-3">
+            <div class="nav-wrapper">
+              <a href="{{ url_for('home') }}">
+                <img
+                  class="logo"
+                  src="{{ url_for('static', filename='css/images/logo.png') }}"
+                  alt="Meatblog"
+              /></a>
+              <a
+                href="#"
+                data-target="mobile-demo"
+                class="sidenav-trigger right"
+                ><i class="fas fa-bars"></i
+              ></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="{{ url_for('find_recipe') }}">Find Recipe</a></li>
+                {% if session.user %}
+                <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+                {% else %}
+                <li>
+                  <a href="{{ url_for('home', _anchor='about-section') }}"
+                    >About</a
+                  >
+                </li>
+                {% endif %} {% if session.user %}
+                <li>
+                  <a href="https://meatboxlondon.co.uk/" target="_blank"
+                    >Order Meat</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="{{ url_for('sign_out') }}"
+                    class="waves-effect waves-light btn red lighten-2"
+                    >Sign Out</a
+                  >
+                </li>
+                {% else %}
+                <li>
+                  <a
+                    href="{{ url_for('sign_up') }}"
+                    class="waves-effect waves-light btn red lighten-2"
+                    >Sign Up</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="{{ url_for('sign_in') }}"
+                    class="sign-in-btn waves-effect waves-light btn red lighten-5"
+                    >Sign In</a
+                  >
+                </li>
+                {% endif %}
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- Mobile Nav Bar -->
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="{{ url_for('find_recipe') }}">Find Recipe</a></li>
+        {% if session.user %}
+        <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+        {% else %}
+        <li>
+          <a href="{{ url_for('home', _anchor='about-section') }}">About</a>
+        </li>
+        {% endif %} {% if session.user %}
+        <li>
+          <a href="https://meatboxlondon.co.uk/" target="_blank">Order Meat</a>
+        </li>
+        <li>
+          <a
+            href="{{ url_for('sign_out') }}"
+            class="waves-effect waves-light btn red lighten-2"
+            >Sign Out</a
+          >
+        </li>
+        {% else %}
+        <li>
+          <a
+            href="{{ url_for('sign_up') }}"
+            class="waves-effect waves-light btn red lighten-2"
+            >Sign Up</a
+          >
+        </li>
+        <li>
+          <a
+            href="{{ url_for('sign_in') }}"
+            class="sign-in-btn waves-effect waves-light btn red lighten-5"
+            >Sign In</a
+          >
+        </li>
+        {% endif %}
+      </ul>
+    </header>
     <div>
       <!-- flash messages -->
       {% with messages = get_flashed_messages() %} {% if messages %} {% for
