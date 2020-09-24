@@ -86,12 +86,13 @@
           name="image_url"
           type="text"
           minlength="5"
+          pattern="https://.*"
           class="validate"
           required
         />
         <label for="image_url">Add an image</label>
         <span class="helper-text" data-error="wrong" data-success="right"
-          >Add a URL for an image</span
+          >Add a URL for an image. Be sure to include 'https://' also</span
         >
       </div>
     </div>
