@@ -43,7 +43,7 @@
       <!-- Expandable Content -->
       <div class="col s9"></div>
       <div class="collapsible-body">
-        <span
+        <div
           ><h2>Ingredients</h2>
           {% for ingredient in recipe.recipe_ingredients.splitlines() %}
           <p>{{ ingredient }}</p>
@@ -51,7 +51,7 @@
           <h2>Method</h2>
           {% for method in recipe.recipe_method.splitlines() %}
           <p>{{ method }}</p>
-          {% endfor %}</span
+          {% endfor %}</div
         >
       </div>
     </li>

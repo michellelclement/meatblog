@@ -120,7 +120,7 @@ def add_recipe():
 # Edit Task
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
-    # Following code to edit task and update database
+    # Following code to edit recipe and update database
     if request.method == "POST":
         submit = {
             "category": request.form.get("category"),
