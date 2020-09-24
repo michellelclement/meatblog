@@ -2,54 +2,60 @@
 
 <!-- Main Homepage Image -->
 <div class="row main-image-row">
-	<div class="col m8 s12 main-image">
-		<img
+  <div class="col m8 s12 main-image">
+    <img
       class="responsive-img"
       src="{{ url_for('static', filename='css/images/homepage_image.jpg') }}"
+      alt="Image of some Crispy Chicken Wings"
     />
-		<div id="main-image-text" class="left-align">
-			<h1>Tasty meat based recipes</h1>
-			<h2>Cook, Submit, Share</h2>
-			<a href="{{ url_for('find_recipe') }}" class="waves-effect waves-light btn red lighten-2 header-btn">Find a
-				Recipe</a>
-		</div>
-	</div>
+    <div id="main-image-text" class="left-align">
+      <h1>Tasty meat based recipes</h1>
+      <h2>Cook, Submit, Share</h2>
+      <a
+        href="{{ url_for('find_recipe') }}"
+        class="waves-effect waves-light btn red lighten-2 header-btn"
+        >Find a Recipe</a
+      >
+    </div>
+  </div>
 
-	<!-- Top right Image Box - top -->
+  <!-- Top right Image Box - top -->
 
-	<div class="col m4 s6 homepage-sml-img">
-		<a href="{{ url_for('sign_up') }}"><img
+  <div class="col m4 s6 homepage-sml-img">
+    <a href="{{ url_for('sign_up') }}"
+      ><img
         class="responsive-img"
-        src="{{ url_for('static', filename='css/images/homepage_image.jpg') }}"
+        src="{{ url_for('static', filename='css/images/homepage-top-right.jpg') }}"
+        alt="Image of Chilli Con Carne"
       />
-			<div class="small-image-text center-align">
-				<h3>Sign up and publish your own recipes</h3>
-			</div>
-		</a>
-	</div>
+      <div class="small-image-text center-align">
+        <h3>Sign up and publish your own recipes</h3>
+      </div>
+    </a>
+  </div>
 
-	<!-- Top right Image Box - bottom -->
-	<div class="col m4 s6 homepage-sml-img" id="bottom-right-image">
-		<a href="https://meatboxlondon.co.uk/" target="_blank">
-			<img
+  <!-- Top right Image Box - bottom -->
+  <div class="col m4 s6 homepage-sml-img" id="bottom-right-image">
+    <a href="https://meatboxlondon.co.uk/" target="_blank">
+      <img
         class="responsive-img"
         src="{{ url_for('static', filename='css/images/meatbox.png') }}"
+        alt="Image of fresh meat"
       />
-			<div class="small-image-text center-align">
-				<h3>Fresh meat delivered to your door</h3>
-			</div>
-		</a>
-	</div>
+      <div class="small-image-text center-align">
+        <h3>Fresh meat delivered to your door</h3>
+      </div>
+    </a>
+  </div>
 </div>
 
 <!-- About Section -->
 <div class="about-container" id="about-section">
-	<div class="row about-row center-align">
-
-		<div class="col s12 m6 grey lighten-2 about-col center-block">
-			<h2>About Meatblog</h2>
-			<p flow-text>
-Meatblog is a Meat based recipe website providing tasty meaty
+  <div class="row about-row center-align">
+    <div class="col s12 m6 grey lighten-2 about-col center-block">
+      <h2>About Meatblog</h2>
+      <p flow-text>
+        Meatblog is a Meat based recipe website providing tasty meaty
         recipes.<br />
         Recipes have been submitted by our community of cooking enthusiasts.<br /><br />
         Do you have a tasty recipe you want to share with others?<br />
@@ -60,85 +66,89 @@ Meatblog is a Meat based recipe website providing tasty meaty
         class="waves-effect waves-light btn red lighten-2 about-btn center-block"
         >Sign In</a
       >
-		</div>
+    </div>
 
-		<div class="col s12 m6 grey lighten-1 about-meatbox-col">
-			<h2>Order Fresh Meat</h2>
-			<p flow-text>
-				Looking for some high quality, fresh meat for your recipes?<br />
+    <div class="col s12 m6 grey lighten-1 about-meatbox-col">
+      <h2>Order Fresh Meat</h2>
+      <p flow-text>
+        Looking for some high quality, fresh meat for your recipes?<br />
         Look no further than MeatBox.<br /><br />
         Simply add the items you wish to your box and place your order for
         delivery.<br />
         Click below to visit Meatbox.
       </p>
-      <a href="https://meatboxlondon.co.uk/" target="_blank"
-                        class="waves-effect waves-light btn red lighten-2 about-btn">Visit Meatbox</a>
-		</div>
-
-	</div>
+      <a
+        href="https://meatboxlondon.co.uk/"
+        target="_blank"
+        class="waves-effect waves-light btn red lighten-2 about-btn"
+        >Visit Meatbox</a
+      >
+    </div>
+  </div>
 </div>
-</div>
-</div>
-
 
 <!-- Recipe of the Month -->
 
 <section class="recipe-month-section">
-<div class="row recipe-of-month valign-wrapper">
-	<div class="col s12">
-		<div class="col m6 s12">
-			<img
-        class="responsive-img recipe-of-month-image"
-        src="{{ url_for('static', filename='css/images/pancakes.jpg') }}"
-      />
+  <div class="row recipe-of-month valign-wrapper">
+    <div class="col s12">
+      <div class="col m6 s12">
+        <img
+          class="responsive-img recipe-of-month-image"
+          src="{{ url_for('static', filename='css/images/pancakes.jpg') }}"
+          alt="Crispy Bacon Pancakes"
+        />
+      </div>
+      <div class="col m6 s12">
+        <h2>Recipe of the Month</h2>
+        <h3>Recipe name</h3>
+        <h4>Ingredients</h4>
+        <p>
+          •140g self-raising flower<br />
+          • Shake of salt<br />
+          • 2 tbsp caster sugar<br />
+          • 125m milk<br />
+          • 1 large egg<br />
+          • 1 tbsp Olive oil<br />
+          • Maple Syrup<br />
+          • Bacon<br />
+        </p>
+        <h4>Method</h4>
+        <p>
+          First cook your crispy bacon…<br />
+          1. Lay bacon on a cold oven proof tray and put it in a cold oven<br />
+          2. Turn the oven on to 200’c and set the time for 20mins<br />
+          3. It may be done slightly before, when it is, remove the oven and put
+          the bacon on some kitchen roll to soak up any liquid<br />
+          4. Whilst the bacon is cooking, mix together the flour, salt, sugar.
+          If you can be bothered, sieve it, it will taste a bit better but not
+          much<br />
+          5. Lightly beat the egg, add the milk and oil and mix<br />
+          6. Mix the two mixtures together. They should form a nice batter with
+          a little beating and mixing. It will be quite a thick mixture<br />
+          7. When the Bacon is done, heat a frying pan to a medium heat<br />
+          8. Add some mixture, it will be thick, that’s fine<br />
+          9. Lay a piece of bacon on top<br />
+          10. When the batter starts to bubble, flip it over<br />
+          11. When both sides are browned lightly, its ready to eat!<br />
+        </p>
+      </div>
     </div>
-			<div class="col m6 s12">
-				<h2>Recipe of the Month</h2>
-				<h3>Recipe name</h3>
-				<h4>Ingredients</h4>
-				<p>
-					•140g self-raising flower<br />
-        • Shake of salt<br />
-        • 2 tbsp caster sugar<br />
-        • 125m milk<br />
-        • 1 large egg<br />
-        • 1 tbsp Olive oil<br />
-        • Maple Syrup<br />
-        • Bacon<br />
-      </p>
-					<h4>Method</h4>
-					<p>
-						First cook your crispy bacon…<br />
-        1. Lay bacon on a cold oven proof tray and put it in a cold oven<br />
-        2. Turn the oven on to 200’c and set the time for 20mins<br />
-        3. It may be done slightly before, when it is, remove the oven and put
-        the bacon on some kitchen roll to soak up any liquid<br />
-        4. Whilst the bacon is cooking, mix together the flour, salt, sugar. If
-        you can be bothered, sieve it, it will taste a bit better but not
-        much<br />
-        5. Lightly beat the egg, add the milk and oil and mix<br />
-        6. Mix the two mixtures together. They should form a nice batter with a
-        little beating and mixing. It will be quite a thick mixture<br />
-        7. When the Bacon is done, heat a frying pan to a medium heat<br />
-        8. Add some mixture, it will be thick, that’s fine<br />
-        9. Lay a piece of bacon on top<br />
-        10. When the batter starts to bubble, flip it over<br />
-        11. When both sides are browned lightly, its ready to eat!<br />
-      </p>
-			</div>
-		</div>
-	</div>
+  </div>
 </section>
 
-	<!-- Submit Your Own Recipe -->
-	<div class="col s12 center-align submit-recipe-section">
-		<h1>Submit your own recipe</h1>
-		<p>
-			Do you have a tasty, meat based recipe you would like to share?<br />Create
+<!-- Submit Your Own Recipe -->
+<div class="col s12 center-align submit-recipe-section">
+  <h1>Submit your own recipe</h1>
+  <p>
+    Do you have a tasty, meat based recipe you would like to share?<br />Create
     an account quickly and for free and post away!
   </p>
-			<a href="{{ url_for('sign_up') }}" class="waves-effect waves-light btn red lighten-2 about-btn">Sign
-				up</a>
-	</div>
+  <a
+    href="{{ url_for('sign_up') }}"
+    class="waves-effect waves-light btn red lighten-2 about-btn"
+    >Sign up</a
+  >
+</div>
 
-	{% endblock %}
+{% endblock %}
