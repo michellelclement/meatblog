@@ -67,6 +67,10 @@ h4 {
   color: #383838;
 }
 
+.sidenav li > a.btn {
+  color: #383838;
+}
+
 .view-btn {
   color: #383838;
 }
@@ -138,14 +142,14 @@ h4 {
   margin: 5px;
   padding: 5px;
 }
- 
+
 #bottom-right-image {
   margin-top: 15px;
-} 
+}
 
 /* Homepage - About Section */
 
-.about-container{
+.about-container {
   display: inline-flex;
   width: 100%;
   margin: 50px 0px;
@@ -154,15 +158,14 @@ h4 {
 .about-col,
 .about-meatbox-col {
   height: 100%;
-    max-height: 400px;
-    margin: auto;
-    width: 75%;
+  max-height: 400px;
+  margin: auto;
+  width: 75%;
 }
 
 .about-btn {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
-
 
 .recipe-of-month {
   margin-bottom: 70px;
@@ -201,12 +204,10 @@ footer {
 /* Media Queries */
 
 @media only screen and (max-width: 600px) {
-.homepage-sml-img {
+  .homepage-sml-img {
     margin-top: 15px;
   }
-
 }
-
 
 @media only screen and (max-width: 768px) {
   .main-image-row {
@@ -214,7 +215,7 @@ footer {
     margin-bottom: 0px;
   }
 
-#main-image-text h1 {
+  #main-image-text h1 {
     font-size: 2.3rem;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -230,7 +231,7 @@ footer {
   }
 
   .recipe-month-section {
-      margin-top: 100px;
+    margin-top: 100px;
   }
 
   /* View Recipe Page */
@@ -247,5 +248,3 @@ footer {
     order: 2;
   }
 }
-
-
