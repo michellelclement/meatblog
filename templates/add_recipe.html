@@ -1,20 +1,20 @@
 {% extends "base.html" %} {% block content %}
 
 <div class="container center-align">
-  <div class="col">
-    <div class="row">
-      <h1>Add a Recipe</h1>
-    </div>
-  </div>
+	<div class="col">
+		<div class="row">
+			<h1>Add a Recipe</h1>
+		</div>
+	</div>
 </div>
 
 <div class="row card-panel">
-  <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
-    <!-- Category Selector -->
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="fas fa-chevron-down prefix"></i>
-        <select id="category" name="category" class="validate" required>
+	<form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
+		<!-- Category Selector -->
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="fas fa-chevron-down prefix"></i>
+				<select id="category" name="category" class="validate" required>
           <option value="" disabled selected>Select Meal Category</option>
           {% for category in categories %}
           <option value="{{ category.category }}"
@@ -22,13 +22,13 @@
           >
           {% endfor %}
         </select>
-      </div>
-    </div>
-    <!-- Recipe Name -->
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="fas fa-utensils prefix"></i>
-        <input
+			</div>
+		</div>
+		<!-- Recipe Name -->
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="fas fa-utensils prefix"></i>
+				<input
           id="recipe_name"
           name="recipe_name"
           type="text"
@@ -37,32 +37,31 @@
           class="validate"
           required
         />
-        <label for="recipe_name">Recipe Name</label>
-      </div>
-    </div>
-    <!-- Recipe Ingredients -->
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="fas fa-egg prefix"></i>
-        <textarea
+				<label for="recipe_name">Recipe Name</label>
+			</div>
+		</div>
+		<!-- Recipe Ingredients -->
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="fas fa-egg prefix"></i>
+				<textarea
           name="recipe_ingredients"
           id="recipe_ingredients"
           cols="1"
           rows="15"
           class="materialize-textarea validate"
         ></textarea>
-        <label for="recipe_ingredients">Recipe Ingredients</label>
-        <span class="helper-text" data-error="wrong" data-success="right"
-          >Each ingredient must be entered on a new line.</span
-        >
-      </div>
-    </div>
+				<label for="recipe_ingredients">Recipe Ingredients</label>
+				<span class="helper-text" data-error="wrong" data-success="right"
+          >Each ingredient must be entered on a new line.</span>
+			</div>
+		</div>
 
-    <!-- Recipe Method -->
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="fas fa-book-open prefix"></i>
-        <textarea
+		<!-- Recipe Method -->
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="fas fa-book-open prefix"></i>
+				<textarea
           id="recipe_method"
           name="recipe_method"
           cols="1"
@@ -70,18 +69,17 @@
           class="materialize-textarea validate"
           required
         ></textarea>
-        <label for="recipe_method">Recipe Method</label>
-        <span class="helper-text" data-error="wrong" data-success="right"
-          >Add each step in the recipe on a new line.</span
-        >
-      </div>
-    </div>
+				<label for="recipe_method">Recipe Method</label>
+				<span class="helper-text" data-error="wrong" data-success="right"
+          >Add each step in the recipe on a new line.</span>
+			</div>
+		</div>
 
-    <!-- Add an image -->
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="fas fa-images prefix"></i>
-        <input
+		<!-- Add an image -->
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="fas fa-images prefix"></i>
+				<input
           id="image_url"
           name="image_url"
           type="text"
@@ -89,24 +87,23 @@
           pattern="https://.*"
           class="validate"
         />
-        <label for="image_url">Add an image</label>
-        <span class="helper-text" data-error="wrong" data-success="right"
-          >To add an image to your recipe, paste an image URL here. You must include 'https://'</span
-        >
-      </div>
+				<label for="image_url">Add an image</label>
+				<span class="helper-text" data-error="wrong" data-success="right"
+          >To add an image to your recipe, paste an image URL here. You must include 'https://'</span>
+			</div>
+		</div>
+		<div>
+			<input id="date_added" name="date_added" />
     </div>
-    <div>
-      <input id="date_added" name="date_added" />
-    </div>
-    <!-- Submit Recipe Button -->
-    <div class="row">
-      <div class="col s12 center-align">
-        <button type="submit" class="col s12 btn-large red lighten-2">
+			<!-- Submit Recipe Button -->
+			<div class="row">
+				<div class="col s12 center-align">
+					<button type="submit" class="col s12 btn-large red lighten-2">
           Submit Recipe
         </button>
-      </div>
-    </div>
-  </form>
+				</div>
+			</div>
+	</form>
 </div>
 
 {% endblock %}

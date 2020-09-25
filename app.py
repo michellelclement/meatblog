@@ -121,8 +121,9 @@ def edit_recipe(recipe_id):
         submit = {
             "category": request.form.get("category"),
             "recipe_name": request.form.get("recipe_name"),
-            "recipe_ingredients": request.form.get("recipe_ingredients").split(","),
+            "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_method": request.form.get("recipe_method"),
+            "image_url": request.form.get("image_url"),
             "created_by": session["user"]
         }
 
