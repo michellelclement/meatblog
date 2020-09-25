@@ -25,7 +25,7 @@ def home():
 
 @app.route("/find_recipe")
 def find_recipe():
-    recipes = mongo.db.recipes.find()
+    recipes = mongo.db.recipes.find().sort("date_added")
     return render_template("recipes.html", recipes=recipes)
 
 
