@@ -29,8 +29,6 @@ def find_recipe():
     return render_template("recipes.html", recipes=recipes)
 
 
-
-
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
     if request.method == "POST":
@@ -72,15 +70,13 @@ def sign_in():
                 flash("Welcome, {}".format(
                     request.form.get("username")))
                 return redirect(url_for("home", username=session["user"]))
-                # below to be added after profile page is created - redirect user to their profile
-                # return redirect(url_for("profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("sign_in"))
 
         else:
-        # username doesn't exist
+            # Username doesn't exist
             flash("Incorrect Username and/or Password")
             return redirect(url_for("sign_in"))
 
@@ -117,7 +113,7 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
-# Edit Task
+# Edit Recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     # Following code to edit recipe and update database
