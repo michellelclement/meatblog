@@ -205,9 +205,6 @@ footer {
     margin: 5px;
 }
 
-.edit-btn {
-    width: 20%;
-}
 /* Media Queries */
 
 @media only screen and (max-width: 600px) {
