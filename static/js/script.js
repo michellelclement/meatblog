@@ -3,6 +3,6 @@ $(document).ready(function(){
     $('.collapsible').collapsible();
     $('select').formSelect();
     $('.modal').modal();
-  });
+});
 
-document.getElementById('date_added').value = Date(); 
+// document.getElementById('date_added').value = Date(); 

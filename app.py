@@ -82,6 +82,7 @@ def sign_in():
 
     return render_template("sign_in.html")
 
+
 # Log out function
 @app.route("/sign_out")
 def sign_out():
