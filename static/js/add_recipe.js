@@ -1,0 +1,1 @@
+document.getElementById('date_added').value = Date(); 
