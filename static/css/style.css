@@ -147,7 +147,7 @@ h4 {
   margin-top: 15px;
 }
 
-/* Homepage - About Section */
+/* About Section */
 
 .about-container {
   display: inline-flex;
@@ -201,6 +201,13 @@ footer {
   padding: 20px 0px;
 }
 
+.edit-buttons > .btn-large {
+    margin: 5px;
+}
+
+.edit-btn {
+    width: 20%;
+}
 /* Media Queries */
 
 @media only screen and (max-width: 600px) {
