@@ -4,6 +4,7 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: "Open Sans", sans-serif;
+  background-color: red;
 }
 
 h1,
@@ -242,6 +243,19 @@ footer {
     margin-top: 50px;
   }
 
+  .recipes {
+      padding-left: 0px;
+      padding-right: 0px;
+  }
+
+  .recipes-img {
+      padding-right: 0;
+  }
+
+  .recipes-name {
+      padding: 0;
+  }
+  
   /* View Recipe Page */
 
   .recipe_details {
