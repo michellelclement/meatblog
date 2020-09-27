@@ -211,6 +211,10 @@ footer {
   .homepage-sml-img {
     margin-top: 15px;
   }
+
+  .flashes h3 {
+      line-height: 2;
+  }
 }
 
 @media only screen and (max-width: 768px) {
