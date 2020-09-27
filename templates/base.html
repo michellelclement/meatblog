@@ -53,12 +53,13 @@
                     >About</a
                   >
                 </li>
-                {% endif %} {% if session.user %}
+                {% endif %} 
                 <li>
                   <a href="https://meatboxlondon.co.uk/" target="_blank"
                     >Order Meat</a
                   >
                 </li>
+                {% if session.user %}
                 <li>
                   <a
                     href="{{ url_for('sign_out') }}"
@@ -96,10 +97,11 @@
         <li>
           <a href="{{ url_for('home', _anchor='about-section') }}">About</a>
         </li>
-        {% endif %} {% if session.user %}
+        {% endif %}
         <li>
           <a href="https://meatboxlondon.co.uk/" target="_blank">Order Meat</a>
         </li>
+         {% if session.user %}
         <li>
           <a
             href="{{ url_for('sign_out') }}"
