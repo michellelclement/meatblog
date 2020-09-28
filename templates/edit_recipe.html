@@ -19,7 +19,7 @@
       <div class="input-field col s12">
         <i class="fas fa-chevron-down prefix"></i>
         <select id="category" name="category" class="validate" required>
-          <option value="" disabled selected>Select Meal Category</option>
+          <option value="" disabled>Select Meal Category</option>
           {% for category in categories %} {% if category.category ==
           recipe.category %}
           <option value="{{ category.category }}" selected
