@@ -14,7 +14,7 @@
     <div class="row">
       <div class="input-field col s12">
         <i class="fas fa-chevron-down prefix"></i>
-        <select id="category" name="category" class="validate" required>
+        <select id="category" name="category" class="validate">
           <option value="" disabled selected>Select Meal Category</option>
           {% for category in categories %}
           <option value="{{ category.category }}"
@@ -50,6 +50,7 @@
           cols="1"
           rows="15"
           class="materialize-textarea validate"
+          required
         ></textarea>
         <label for="recipe_ingredients">Recipe Ingredients</label>
         <span class="helper-text" data-error="wrong" data-success="right"
