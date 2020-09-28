@@ -49,7 +49,7 @@ def sign_up():
 
         # Put user into a session cookie
         session["user"] = request.form.get("username").lower()
-        flash("Registration Successful! You can now share your own recipes to the website!")
+        flash("Registration Successful! \ You can now share your own recipes!")
         return redirect(url_for("home", username=session["user"]))
 
     return render_template("sign_up.html")
@@ -134,7 +134,9 @@ def edit_recipe(recipe_id):
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category", 1)
-    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+    return render_template("edit_recipe.html",
+                           recipe=recipe,
+                           categories=categories)
 
 
 # Delete Recipe
