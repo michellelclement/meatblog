@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 html,
 body {
   width: 100%;
@@ -134,7 +141,9 @@ h4 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -150,6 +159,8 @@ h4 {
 /* About Section */
 
 .about-container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100%;
   margin: 50px 0px;
@@ -168,7 +179,7 @@ h4 {
 }
 
 .recipe-of-month-title {
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .recipe-of-month {
@@ -250,14 +261,23 @@ footer {
   /* View Recipe Page */
 
   .recipe_details {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .recipe-image {
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 
   .recipe-info-text {
-    order: 2;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
 }
