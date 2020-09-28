@@ -4,7 +4,6 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: "Open Sans", sans-serif;
-  background-color: red;
 }
 
 h1,
@@ -168,6 +167,10 @@ h4 {
   margin-bottom: 20px;
 }
 
+.recipe-of-month-title {
+    margin-top: 50px;
+}
+
 .recipe-of-month {
   margin-bottom: 70px;
 }
@@ -237,10 +240,6 @@ footer {
 
   .small-image-text h3 {
     font-size: 1rem;
-  }
-
-  .recipe-month-section {
-    margin-top: 50px;
   }
 
   .recipes {
