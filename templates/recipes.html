@@ -44,10 +44,8 @@
 						{% for ingredient in recipe.recipe_ingredients.splitlines() %}
 						<p>{{ ingredient }}</p>
 						{% endfor %}
-						<h2>Method</h2>
-						{% for method in recipe.recipe_method.splitlines() %}
-						<p>{{ method }}</p>
-						{% endfor %}
+						<a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"
+							class="waves-effect waves-light btn view-btn red lighten-5">View Full Recipe</a>
 					</div>
 				</div>
 		</li>
