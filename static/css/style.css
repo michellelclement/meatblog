@@ -210,6 +210,11 @@ footer {
   color: white;
 }
 
+/* Add a Recipe */
+.dropdown-content li>span {
+    color: black;
+}
+
 /* View Recipe Page */
 
 #recipe-by {
