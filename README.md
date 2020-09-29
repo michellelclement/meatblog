@@ -155,44 +155,44 @@ I used the W3C HTML Validator (https://validator.w3.org) to check the validity o
 * View_recipe.html
     * Passed with no errors
 
-##User Stories Testing:
+## User Stories Testing:
 **New External User Goals:**
 *As a new user, I want to be able to view recipes to cook*
-•	There are 2 prompts/CTA’s to direct a new (and also returning) user to view all the website recipes so they can find one to cook. The first and main CTA is in the navigation header under ‘Find a Recipe.’ This link is visible to all new visitors, as well as signed in visitors, so it will always be there. Additionally, there is a Find a Recipe button in the main homepage image
+* There are 2 prompts/CTA’s to direct a new (and also returning) user to view all the website recipes so they can find one to cook. The first and main CTA is in the navigation header under ‘Find a Recipe.’ This link is visible to all new visitors, as well as signed in visitors, so it will always be there. Additionally, there is a Find a Recipe button in the main homepage image
 
 *As a new user, I want to be able to register for the website and post my own recipes*
-•	Thanks to 3 ‘Sign Up’ buttons on the homepage (in the main navigation, in the About section and in the large ‘Submit Your Own Recipe’ bar), directing a user to the sign up function is very clear. As well as these buttons, there is an image at the top of the homepage which also states a user can sign up to post their own recipes.
-•	With the Sign Up button in the main navigation, the user will be able to click on this button no matter there they are currently on the site.
-•	There is also a link to ‘Sign Up’ from the ‘Sign In’ page should the user end up on this page instead.
+* Thanks to 3 ‘Sign Up’ buttons on the homepage (in the main navigation, in the About section and in the large ‘Submit Your Own Recipe’ bar), directing a user to the sign up function is very clear. As well as these buttons, there is an image at the top of the homepage which also states a user can sign up to post their own recipes.
+* With the Sign Up button in the main navigation, the user will be able to click on this button no matter there they are currently on the site.
+* There is also a link to ‘Sign Up’ from the ‘Sign In’ page should the user end up on this page instead.
 
 **Frequent User Goals:**
 *As a frequent user, I want to be able to share my own recipes to the website and with the community in an easy way*
-•	Once logged in via one of the many options above, an ‘Add Recipe’ item will appear in the main navigation. The Add Recipe page is a simple form-based page which the user can fill out to be able to add their own recipes.
-•	The form also includes some additional instructions for the user to follow when uploading their recipes to assist them with the process.
+* Once logged in via one of the many options above, an ‘Add Recipe’ item will appear in the main navigation. The Add Recipe page is a simple form-based page which the user can fill out to be able to add their own recipes.
+* The form also includes some additional instructions for the user to follow when uploading their recipes to assist them with the process.
 
 *As a frequent user, I want to be find new recipes to cook*
-•	Recipes on the ‘Find a Recipe’ page have been organised to display the newest recipes first, making it easy for a returning visitor to be able to view new recipes, rather than need to look for them.
+* Recipes on the ‘Find a Recipe’ page have been organised to display the newest recipes first, making it easy for a returning visitor to be able to view new recipes, rather than need to look for them.
 
 *As a frequent user, I want to be able to share recipes that I like to my social network pages*
-•	Social share buttons have been added to the View Recipe page. This allows the website user to share that particular recipe to social pages, as well as share a link in an email.
+* Social share buttons have been added to the View Recipe page. This allows the website user to share that particular recipe to social pages, as well as share a link in an email.
 
 **Returning External User Goals:**
 *As a returning user, I want to be able to edit/update my posted recipes*
-•	Users can edit their own recipes easily. Once on the ‘Find a Recipe’ page, the user will be able to see an ‘Edit Recipe’ button to the right, beneath the ‘View Recipe’ button. This will take them to a full Edit Recipe page which looks very similar to the Add Recipe page. Users can replace the information in the form, then click update to update the recipe, or cancel should they change their mind.
-•	Users will only be able to see an ‘Edit Recipe’ button once they are logged and it will only be displayed on for recipes they added to the website from their account.
+* Users can edit their own recipes easily. Once on the ‘Find a Recipe’ page, the user will be able to see an ‘Edit Recipe’ button to the right, beneath the ‘View Recipe’ button. This will take them to a full Edit Recipe page which looks very similar to the Add Recipe page. Users can replace the information in the form, then click update to update the recipe, or cancel should they change their mind.
+* Users will only be able to see an ‘Edit Recipe’ button once they are logged and it will only be displayed on for recipes they added to the website from their account.
 
 *As a returning user, I want to be able to delete my posted recipes*
-•	Within the Edit Recipe page there is a large button at the bottom ‘Delete Recipe.’
-•	Once clicked, the recipe will not immediately delete, instead a modal will pop up to ask the user to confirm that do in fact want to delete their recipe. Upon agreeing, the recipe is removed from the website, as well as the database.
+* Within the Edit Recipe page there is a large button at the bottom ‘Delete Recipe.’
+* Once clicked, the recipe will not immediately delete, instead a modal will pop up to ask the user to confirm that do in fact want to delete their recipe. Upon agreeing, the recipe is removed from the website, as well as the database.
 
 **Site Owner:**
 *As the site owner, I want to share my meat-based recipes*
-•	The website owner is able to post, edit and delete their own recipes in the same way that external users are able to do so.
+* The website owner is able to post, edit and delete their own recipes in the same way that external users are able to do so.
 
 *As the site owner, I want to drive traffic from this site to upsell from the fresh meat delivery business.*
-•	The navigation includes a button to ‘Order Meat’. Once clicked, the user will be taken, via a new tab, to the fresh meat delivery company MeatBox. 
-•	Additionally, there are 2 further CTA’s to show the user of the site where they can order fresh meat – in the main images at the top of the page, and in the about section.
-•	Thanks to the website being a meat based blog, links to an external meat delivery service fit in to the theme perfectly.
+* The navigation includes a button to ‘Order Meat’. Once clicked, the user will be taken, via a new tab, to the fresh meat delivery company MeatBox. 
+* Additionally, there are 2 further CTA’s to show the user of the site where they can order fresh meat – in the main images at the top of the page, and in the about section.
+* Thanks to the website being a meat based blog, links to an external meat delivery service fit in to the theme perfectly.
 
 View the full testing document here: (static/readme_docs/testing.pdf)
 
