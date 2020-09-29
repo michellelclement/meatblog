@@ -1,24 +1,20 @@
 {% extends "base.html" %} {% block content %}
 
 <div class="container center-align">
-  <div class="row">
-    <div class="col s12">
-      <h1>Edit Recipe</h1>
-    </div>
-  </div>
+	<div class="row">
+		<div class="col s12">
+			<h1>Edit Recipe</h1>
+		</div>
+	</div>
 </div>
 
 <div class="row card-panel">
-  <form
-    class="col s12"
-    method="POST"
-    action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
-  >
-    <!-- Category Selector -->
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="fas fa-chevron-down prefix"></i>
-        <select id="category" name="category" class="validate" required>
+	<form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+		<!-- Category Selector -->
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="fas fa-chevron-down prefix"></i>
+				<select id="category" name="category" class="validate" required>
           <option value="" disabled>Select Meal Category</option>
           {% for category in categories %} {% if category.category ==
           recipe.category %}
@@ -31,13 +27,13 @@
           >
           {% endif %} {% endfor %}
         </select>
-      </div>
-    </div>
-    <!-- Recipe Name -->
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="fas fa-utensils prefix"></i>
-        <input
+			</div>
+		</div>
+		<!-- Recipe Name -->
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="fas fa-utensils prefix"></i>
+				<input
           id="recipe_name"
           name="recipe_name"
           type="text"
@@ -47,14 +43,14 @@
           class="validate"
           required
         />
-        <label for="recipe_name">Recipe Name</label>
-      </div>
-    </div>
-    <!-- Recipe Ingredients -->
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="fas fa-egg prefix"></i>
-        <input
+				<label for="recipe_name">Recipe Name</label>
+			</div>
+		</div>
+		<!-- Recipe Ingredients -->
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="fas fa-egg prefix"></i>
+				<input
           id="recipe_ingredients"
           name="recipe_ingredients"
           type="text"
@@ -64,14 +60,14 @@
           class="validate"
           required
         />
-        <label for="recipe_ingredients">Recipe Ingredients</label>
-      </div>
-    </div>
-    <!-- Recipe Method -->
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="fas fa-book-open prefix"></i>
-        <textarea
+				<label for="recipe_ingredients">Recipe Ingredients</label>
+			</div>
+		</div>
+		<!-- Recipe Method -->
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="fas fa-book-open prefix"></i>
+				<textarea
           id="recipe_method"
           name="recipe_method"
           minlength="150"
@@ -79,16 +75,15 @@
           class="materialize-textarea validate"
           required
         >
-{{- recipe.recipe_method -}}</textarea
-        >
-        <label for="recipe_method">Recipe Method</label>
-      </div>
-    </div>
+{{- recipe.recipe_method -}}</textarea>
+				<label for="recipe_method">Recipe Method</label>
+			</div>
+		</div>
 
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="fas fa-images prefix"></i>
-        <input
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="fas fa-images prefix"></i>
+				<input
           id="image_url"
           name="image_url"
           type="text"
@@ -98,57 +93,45 @@
           class="validate"
           required
         />
-        <label for="image_url">Insert new image</label>
-        <span class="helper-text" data-error="wrong" data-success="right"
+				<label for="image_url">Insert new image</label>
+				<span class="helper-text" data-error="wrong" data-success="right"
           >If you want to change your image, paste a new image URL above. You
           must include 'https://'. <br />If you do not wish to change your
-          image, leave this box as it is.</span
-        >
-      </div>
-    </div>
-    <div>
-      <!-- Submit/Update Recipe Button -->
-      <div class="row edit-buttons-row">
-        <div class="edit-buttons col s12">
-          <button type="submit" class="col s12 m3 btn-large red lighten-2">
+          image, leave this box as it is.</span>
+			</div>
+		</div>
+		<div>
+			<!-- Submit/Update Recipe Button -->
+			<div class="row edit-buttons-row">
+				<div class="edit-buttons col s12">
+					<button type="submit" class="col s12 m3 btn-large red lighten-2">
             Update Recipe
           </button>
-          <!-- Cancel Button -->
-          <a
-            href="{{ url_for('find_recipe') }}"
-            class="col s12 m3 btn-large red lighten-3"
-            >Cancel</a
-          >
-          <!-- Delete Recipe Button -->
-          <a
-            href="#delete-modal"
-            class="col s12 m3 btn-large red lighten-1 modal-trigger"
-            >Delete Recipe</a
-          >
-        </div>
-      </div>
+					<!-- Cancel Button -->
+					<a href="{{ url_for('find_recipe') }}" class="col s12 m3 btn-large red lighten-3">Cancel</a>
+					<!-- Delete Recipe Button -->
+					<a href="#delete-modal" class="col s12 m3 btn-large red lighten-1 modal-trigger">Delete Recipe</a>
+				</div>
+			</div>
 
-      <!-- Modal Structure -->
-      <div id="delete-modal" class="modal">
-        <div class="modal-content-container">
-          <div class="modal-content">
-            <h4>Are you sure you want to delete?</h4>
-            <p>
-              If you delete your recipe, this can not be undone.
-            </p>
-          </div>
-          <div class="modal-footer">
-            <a
-              href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-              class="modal-close btn-large red lighten-1"
-              >Delete Recipe</a
-            >
-            <a class="modal-close btn-large red lighten-2">Cancel</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </form>
+			<!-- Modal Structure -->
+			<div id="delete-modal" class="modal">
+				<div class="modal-content-container">
+					<div class="modal-content">
+						<h4>Are you sure you want to delete?</h4>
+						<p>
+							If you delete your recipe, this can not be undone.
+						</p>
+					</div>
+					<div class="modal-footer">
+						<a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+							class="modal-close btn-large red lighten-1">Delete Recipe</a>
+						<a class="modal-close btn-large red lighten-2">Cancel</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
 </div>
 
 {% endblock %}
