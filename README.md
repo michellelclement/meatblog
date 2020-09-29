@@ -6,6 +6,8 @@ The website is a fully responsive, custom-built website which has been designed 
 
 You can view the live website here: [Meatblog](https://meatblog.herokuapp.com/)
 
+![Meatblog Homepage Mockups](static/readme_docs/mockups.jpg)
+
 The purpose of the website is to provide an online, Meat-based recipe blog which has been and continues to be compiled by a community of users, in addition to the site owner.
 
 The owner wanted to create this website to support and increase traffic to their other business, Meatbox, a fresh meat delivery company.
