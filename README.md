@@ -94,6 +94,8 @@ Adding form helpers: I decided to add form helper information to the following p
 
 **The ability for a user to upload a photo to go with their recipe:** Users can add images to their posted recipe via the Add Recipe and Edit Recipe form by including a URL to the image.
 
+**Security features:** The website uses [Werkzeug's](https://werkzeug.palletsprojects.com/en/1.0.x/) standard built in password hashing method for its log in security features to make the security authentication more secure. Werkzeug hashes the password (converts the password into another string) and then it is salted (additional data added) entered by the user. This makes the password very tough to crack. 
+
 **Flash messages:** Flash messages will appear on the website at the top of the page, under the main navigation. These appear for successful and non-successful registration, successful sign in and out, successfully updated and added recipes.
 
 Here are some screenshots of the flashes which appear on the website.
@@ -241,7 +243,8 @@ I used the [W3C HTML Validator](https://validator.w3.org) to check the validity 
 * Additionally, there are 2 further CTA’s to show the user of the site where they can order fresh meat – in the main images at the top of the page, and in the about section.
 * Thanks to the website being a meat based blog, links to an external meat delivery service fit in to the theme perfectly.
 
-View the full testing document here: (static/readme_docs/testing.pdf)
+[View the full testing document here:](static/readme_docs/full_testing_document.pdf)
+
 
 ## Deployment
 
