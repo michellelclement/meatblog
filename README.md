@@ -2,13 +2,13 @@
 
 Meatblog has been built using my learnings and knowledge of all the Code Academy Full Stack Developer Course modules learnt so far. This includes HTML, CSS, JavaScript, Python, Flask and MongoDB.
 
-The website is a fully responsive, custom-built website which has been designed and built with the users wants and needs first, whilst maintaining high design standards.
+The website is a fully responsive, custom-built, database backed, Flask web application which has been designed and built with the users wants and needs first, whilst maintaining high design standards.
 
 You can view the live website here: [Meatblog](https://meatblog.herokuapp.com/)
 
 ![Meatblog Homepage Mockups](static/readme_docs/mockups.jpg)
 
-The purpose of the website is to provide an online, Meat-based recipe blog which has been and continues to be compiled by a community of users, in addition to the site owner.
+The purpose of the website is to provide an online, Meat-based recipe blog which has been and continues to be compiled by a community of users, in addition to the site owner. Users are able to store, view, edit and delete their recipes.
 
 The owner wanted to create this website to support and increase traffic to their other business, Meatbox, a fresh meat delivery company.
 
@@ -74,17 +74,27 @@ Adding form helpers: I decided to add form helper information to the following p
 * Users can click through to order fresh meat to make their recipes
 
 ## Existing Website Features
+
 **Navigation Bar:** the navigation bar allows users to navigate to the relevant sections on the website, including sign in/sign up/sign out, add own recipes, find a recipe and the external link to the fresh meat delivery company. 
+
 **Sign up:** The sign up sections allows users to register for the website so they can upload and edit/delete their own recipes. In the sign up section, users fill out a simple form for a username and password which they then use each time they need to sign in.
+
 **Sign in:** Users can sign into their accounts by using the simple username and password form and the details which they created their account with. Once signed in, users can add, edit and delete their recipes, as well as search for recipes by other users.
+
 **Delete button:** Signed in users will be able to delete their own posted recipes by clicking on the delete button in the Edit Recipe page. They will not be able to delete recipes posted by other users. I have also included some defensive programming using a pop up modal, asking the user to confirm they want to delete their recipe. This will stop recipes being deleted by accident.
 ![Delete Confirmation Modal](static/readme_docs/modal.jpg)
+
 **Edit Recipe button:** Signed in users will be able to edit their own posted recipes by clicking on the edit button. They will not be able to edit recipes posted by other users. 
+
 **Social sharing buttons:** Users will be able to share recipes they like to their social media channels via the social sharing buttons provided. Users will be able to share any recipe, even if they did not post the recipe.
+
 **Order recipes by date added to see new ones first:** The Find a Recipe page is organised by newest posted recipe first/at the top. This will make it easier for new and returning visitors to view the latest recipes.
+
 **The ability for a user to upload a photo to go with their recipe:** Users can add images to their posted recipe via the Add Recipe and Edit Recipe form by including a URL to the image.
+
 **Flash messages:** Flash messages will appear on the website at the top of the page, under the main navigation. These appear for successful and non-successful registration, successful sign in and out, successfully updated and added recipes.
 
+Here are some screenshots of the flashes which appear on the website.
 ![Website Flashes](static/readme_docs/flashes.jpg)
 
 ### Features to add in the future
@@ -96,6 +106,35 @@ There are several features I would like to add to the website in the future. I a
 
 
 ## Schema design
+After carefully considering the elements of the website and the items needed to be stored in and retrieved from the database, I designed the schema to have 3 collections:
+
+**users:** for sign up and sign in
+**recipes:** containing all the elements required for CRUD (create, read, update and delete). The keys in the recipes collection are pulled into the site in the sections ‘Find a Recipe’, ‘Add Recipe’ and ‘Edit Recipe’ and also to delete the recipe from the database.
+**categories:** The ability for users to store and see the different categories in which the recipes are stored and relating to.
+
+![Schema](static/readme_docs/schema.png)
+
+The keys for each collection were decided as follows:
+
+### users:
+**_id:** to be able to reference the user via a unique id
+**username:** the username in which the user would like to be known within the website
+**Password:** The password for which the user wishes to be able to log into the website
+
+### recipes:
+**_id:** Unique identifier for the recipe
+**category:** The selected category of which the recipe applies to
+**recipe_name:** the name in which the user wants to name the recipe
+**recipe_method:** text describing the method to cook the recipe
+**image_url:** a url to be supplied by the user to add an image to their recipe
+**created_by:** this records the name of the user which entered the recipe into the website
+**date_added:** this records the date and time of when the recipe was entered
+
+### categories: the category items are pre-set by the website owner and can only be changed by the website owner.
+**_id:** the unique identifier for each category item 
+**category:** the name of the category. The items set are Breakfast, Lunch, Dinner, Snacks 
+	
+I decided to use MongoDB to store the details entered into the database as it fit the method needed and I 
 
 
 ## Technologies Used
@@ -108,6 +147,7 @@ I used a number of languages, frameworks and tools to construct my website. Thes
 * [Python](https://www.python.org/)
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 * [Materialize](https://materializecss.com/)
+* [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
 * [GitHub](https://github.com/)
 * [GitPod](https://www.gitpod.io/)
 * [MongoDB](https://www.mongodb.com/)
@@ -143,7 +183,7 @@ I used the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to check th
 * 1st test: Passed with no errors.
 
 **W3C HTML Validator**
-I used the W3C HTML Validator (https://validator.w3.org) to check the validity of my HTML code on all 8 pages.
+I used the [W3C HTML Validator](https://validator.w3.org) to check the validity of my HTML code on all 8 pages.
 
 * Index.html
     * Passed with no errors
@@ -204,6 +244,8 @@ View the full testing document here: (static/readme_docs/testing.pdf)
 ## Deployment
 
 ### Deploying Website To Heroku
+By deploying Meatblog to Heroku, I was able to run my Python app and view a live version of the website which updated with each push I made. This link is also shareable to other users to be able to test the site.
+
 1. In the terminal, I created a requirements.txt and Procfile using the following commands:
     1. pip3 freeze –local > requirements.txt
     1. echo web: python app.py > Procfile (be sure to create this file with a capital P)
@@ -217,18 +259,18 @@ Config Vars | Config Vars
 ------------ | -------------
 IP | 0.0.0.0
 PORT | 5000
-SECRET_KEY | (hidden)
-MONGO_URI | (hidden)
+SECRET_KEY | (hidden - entered from eny.py)
+MONGO_URI | (hidden - entered from eny.py)
 MONGO_DBNAME | meatblog
 
-1. In Deploy, I clicked ‘Enable Automatic Deploys’ and deployed from the Master branch.
-1.	Follow this I then clicked ‘Deploy Branch’ and the app was deployed successfully at the URL metablog.herokuapp.com
+7. In Deploy, I clicked ‘Enable Automatic Deploys’ and deployed from the Master branch.
+8.	Follow this I then clicked ‘Deploy Branch’ and the app was deployed successfully at the URL metablog.herokuapp.com
 
 ### To create a clone of the Meatblog repository and run locally
 Cloning the repository makes a copy of the of the repository which you download and store on your machine locally.
 
 To make a clone of Meatblog, follow the following steps:
-1. Visit the main repository of Meatblog [here:](https://github.com/michellelclement/meatblog)
+1. Visit the main repository of Meatblog [here](https://github.com/michellelclement/meatblog)
 1. Above all the repository files and folders, you will find two Green buttons. Click on the one displaying ‘Clone’ with a downward arrow and a download icon.
 1. With the ‘HTTPS’ method selected, click the ‘copy’ button next to the URL. Here you will find the link you will need to copy. The link to copy Meatblog is: https://github.com/michellelclement/meatblog.git 
 1. Open the working directory where you want the repository to be cloned to, and in the terminal use the command and hit enter: 
@@ -238,20 +280,20 @@ To make a clone of Meatblog, follow the following steps:
 
 ## Design
 
-**Colours**
+**Colours:**
 I wanted to keep the colour pallet simple with minimal colours, just using one main colour plus white, greys and black. As I was using Materialize, I chose to go with their ‘red lighten range’ as I liked how each colour looked on its own, and it gave me the flexibility to use different ‘lighten’ values for highlighting different content and colouring buttons. The colour is called red; however, the lighter values were more of a pink/salmon colour, which I really liked.
 
 The main colours I used for the website where the following:
 * Main pink colour: #fb9496 (Materialize red lighten-3)
 * Darker Pink: # a94b4e (Materialize red lighten-2)
 * Darkest Pink: Cancel buttons: #ef5350 (Materialize red lighten-1)
-Off white: View recipe button: #ffebee Red lighten-5
+* Off white: View recipe button: #ffebee Red lighten-5
 
 Additionally, I used the following grey colours:
 * Dark grey: #bdbdbd Grey lighten-1
 * Light grey: #e0e0e0 Grey lighten-2
 
-**Fonts**
+**Fonts:**
 Both fonts I chose were from Google fonts.
 Playfair Display: I liked this font as it is a little more traditional in a modern way. It is clear to read and pairs nicely with the foodie theme of the website.
 Sans Serif: I wanted to keep the body copy of the website clear, modern and easy to ready, and Sans Serif is not only the perfect font for this, but it pairs beautifully with Playfair. 
@@ -266,7 +308,7 @@ Sans Serif: I wanted to keep the body copy of the website clear, modern and easy
 **Recipes:** All recipes added by users michellec and admin are my own personal recipes. Additional recipes have been added by testers of the site.
 
 **Mockups**
-3 x Apple product mockup – Free download via MockupWorld](ttps://www.mockupworld.co/)
+3 x Apple product mockup – Free download via [MockupWorld](ttps://www.mockupworld.co/)
 
 ## Acknowledgements
 
