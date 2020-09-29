@@ -148,12 +148,17 @@
   <h1>Submit your own recipe</h1>
   <p>
     Do you have a tasty, meat based recipe you would like to share?<br />Create
-    an account quickly and for free and post away!
+    an account quickly and for free and post away! Already have an account? Sign In to start posting.
   </p>
   <a
     href="{{ url_for('sign_up') }}"
     class="waves-effect waves-light btn red lighten-2 about-btn"
     >Sign up</a
+  >
+  <a
+    href="{{ url_for('sign_in') }}"
+    class="waves-effect waves-light btn red lighten-2 about-btn center-block"
+    >Sign In</a
   >
 </div>
 
