@@ -17,6 +17,9 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+# Code as directed by Data Centric Development module
+# Modified, added to and rewritten for prjoect
+
 
 @app.route("/")
 @app.route("/home")
@@ -115,6 +118,13 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
+# View Recipe
+@app.route("/view_recipe/<recipe_id>", methods=['GET'])
+def view_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("view_recipe.html", recipe=recipe)
+
+
 # Edit Recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
@@ -145,13 +155,6 @@ def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("find_recipe"))
-
-
-# View Recipe
-@app.route("/view_recipe/<recipe_id>", methods=['GET'])
-def view_recipe(recipe_id):
-    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("view_recipe.html", recipe=recipe)
 
 
 if __name__ == "__main__":

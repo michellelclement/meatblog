@@ -12,6 +12,8 @@ The purpose of the website is to provide an online, Meat-based recipe blog which
 
 The owner wanted to create this website to support and increase traffic to their other business, Meatbox, a fresh meat delivery company.
 
+The target audience of the website are meat eating home cooks, amateur cooks and not necessarily professional cooks, although anyone is welcome. They either cook for themselves, or for their families. 
+
 Recipes will be visible to non-registered users, but users must register to be able to post and edit their own recipes.
 
 Meatblog was a site idea I previously had a go at designing and building some years ago, but due to my lack of knowledge at the time, it was never what I wanted it to be and did not stay live for very long. It was template design-based and had no interactive features, database or user submission functionality. I thought this project would be the perfect time to bring the site idea back to life, and properly this time.
@@ -23,7 +25,7 @@ The site owner is a fan of cooking and cooking meat-based dishes. As a contrast 
 
 The website providees some recipes from the site owner for others to share and follow, but also encourage other users to create a free account and share recipes of their own.
 
-The website makes adding, editing and deleting recipes easy and straightforward for external users, with the ability to share recipes to social channels.
+The website makes creating, reading, updating and deleting recipes easy and straightforward for external users, with the ability to share recipes to social channels.
 
 ## New External User Goals:
 * As a new user, I want to be able to view recipes to cook
