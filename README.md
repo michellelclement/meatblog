@@ -281,6 +281,31 @@ To make a clone of Meatblog, follow the following steps:
 1. Open the working directory where you want the repository to be cloned to, and in the terminal use the command and hit enter: 
         git clone https://github.com/michellelclement/meatblog.git 
 1. All the files will now be cloned into your chosen workspace.
+1. Add a env.py file with the following details:
+	    Import os
+	    os.environ.setdefault("IP", "0.0.0.0")
+        os.environ.setdefault("PORT", "5000")
+        os.environ.setdefault("SECRET_KEY", "your secret key here")
+        os.environ.setdefault("MONGO_URI", "Your URI here")
+        os.environ.setdefault("MONGO_DBNAME", "Your database name here")
+
+Do not commit this page.
+
+1. Create a file named  .gitignore  with the contents simply .env.py
+
+1. To install the modules required on the requirements.txt file, run the command:
+	pip3 install -r requirements.txt
+
+1. You can run the code using the command:
+	python3 app.py
+
+
+## Secret Key & Key Variables
+Secret keys should not be pushed to GitHub, or shared with anyone. To avoid this happening, I included my Secrecy Key and key variables in a file which is stored locally.
+
+The file env.py includes these key variables and secret key. 
+
+To stop this file being pushed to GitHub when commits are made and pushed, I created a .gitignore file which included the file name within it. Every time commits are made and pushed, the env.py file is ignored.
 
 
 ## Design
