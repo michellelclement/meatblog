@@ -76,11 +76,14 @@ Adding form helpers: I decided to add form helper information to the following p
 **Sign up:** The sign up sections allows users to register for the website so they can upload and edit/delete their own recipes. In the sign up section, users fill out a simple form for a username and password which they then use each time they need to sign in.
 **Sign in:** Users can sign into their accounts by using the simple username and password form and the details which they created their account with. Once signed in, users can add, edit and delete their recipes, as well as search for recipes by other users.
 **Delete button:** Signed in users will be able to delete their own posted recipes by clicking on the delete button in the Edit Recipe page. They will not be able to delete recipes posted by other users. I have also included some defensive programming using a pop up modal, asking the user to confirm they want to delete their recipe. This will stop recipes being deleted by accident.
+![Delete Confirmation Modal](static/readme_docs/modal.jpg)
 **Edit Recipe button:** Signed in users will be able to edit their own posted recipes by clicking on the edit button. They will not be able to edit recipes posted by other users. 
 **Social sharing buttons:** Users will be able to share recipes they like to their social media channels via the social sharing buttons provided. Users will be able to share any recipe, even if they did not post the recipe.
 **Order recipes by date added to see new ones first:** The Find a Recipe page is organised by newest posted recipe first/at the top. This will make it easier for new and returning visitors to view the latest recipes.
 **The ability for a user to upload a photo to go with their recipe:** Users can add images to their posted recipe via the Add Recipe and Edit Recipe form by including a URL to the image.
 **Flash messages:** Flash messages will appear on the website at the top of the page, under the main navigation. These appear for successful and non-successful registration, successful sign in and out, successfully updated and added recipes.
+
+![Website Flashes](static/readme_docs/flashes.jpg)
 
 ### Features to add in the future
 There are several features I would like to add to the website in the future. I am not at the skill level to include these now, but would like to come back to them to do so.
