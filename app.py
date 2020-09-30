@@ -87,16 +87,14 @@ def sign_in():
     return render_template("sign_in.html")
 
 
-# Log out function
 @app.route("/sign_out")
 def sign_out():
     if 'user' in session:
         flash("You have been signed out")
-        session.pop("user")
-        return redirect(url_for("sign_in"))
+        return redirect(url_for("home"))
 
     else:
-        return redirect(url_for("home")
+        return redirect(url_for("home"))
 
 
 # Add a Recipe Function
