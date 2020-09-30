@@ -2,7 +2,7 @@
 
 Meatblog has been built using my learnings and knowledge of all the Code Academy Full Stack Developer Course modules learnt so far. This includes HTML, CSS, JavaScript, Python, Flask and MongoDB.
 
-The website is a fully responsive, custom-built, database backed, Flask web application which has been designed and built with the users wants and needs first, whilst maintaining high design standards.
+The website is a fully responsive, custom-built, database-backed, Flask web application which has been designed and built with the users wants and needs first, whilst maintaining high design standards.
 
 You can view the live website here: [Meatblog](https://meatblog.herokuapp.com/)
 
@@ -12,7 +12,7 @@ The purpose of the website is to provide an online, Meat-based recipe blog which
 
 The owner wanted to create this website to support and increase traffic to their other business, Meatbox, a fresh meat delivery company.
 
-The target audience of the website are meat eating home cooks, amateur cooks and not necessarily professional cooks, although anyone is welcome. They either cook for themselves, or for their families. 
+The target audience of the website are meat-eating home cooks, amateur cooks and not necessarily professional cooks, although anyone is welcome. They either cook for themselves, or for their families. 
 
 Recipes will be visible to non-registered users, but users must register to be able to post and edit their own recipes.
 
@@ -23,7 +23,7 @@ You can view the live website here: [Meatblog](https://meatblog.herokuapp.com/)
 ## UX
 The site owner is a fan of cooking and cooking meat-based dishes. As a contrast to the many meat-free/vegan websites which has become popular in recent years, they wish to create a recipe website based solely on meat dishes.
 
-The website providees some recipes from the site owner for others to share and follow, but also encourage other users to create a free account and share recipes of their own.
+The website provides some recipes from the site owner for others to share and follow, but also encourage other users to create a free account and share recipes of their own.
 
 The website makes creating, reading, updating and deleting recipes easy and straightforward for external users, with the ability to share recipes to social channels.
 
@@ -64,12 +64,12 @@ Whilst I was in the process of building the website, I decided to make a few sma
 
 Removal of Delete button from Find Recipe page: I decided to only have the ‘delete recipe’ button within the ‘Edit Recipe’ page rather than the Find a Recipe page also. I felt that there were too many buttons on the ‘Find a Recipe’ page and I did not want to confuse users or take away from the main part of the page – viewing the recipes themselves. Removing the Delete button from this section made the page much cleaner and improved usability of the page.
 
-Added image on Find a Recipe page: I decided to add an image to each recipe on the ‘Find a Recipe’ page. I felt that being a recipe website, the visual cue for each recipe would be important in the section. I feel that the overall result is a huge improvement and make the page much more visually appealing, as well as making recipes easier to find.
+Added an image on Find a Recipe page: I decided to add an image to each recipe on the ‘Find a Recipe’ page. I felt that being a recipe website, the visual cue for each recipe would be important in the section. I feel that the overall result is a huge improvement and make the page much more visually appealing, as well as making recipes easier to find.
 
 Adding form helpers: I decided to add form helper information to the following pages: ‘Sign up’, ‘Add Recipe’ and ‘Edit Recipe.’ Initially, the helpers were to provide the user-specific instructions on how to upload a recipe to the website so that it would be formatted correctly (each item must be on a new line) and to explain to a user what is expected to upload an image. Another reason I decided to add helpers was due to my mentor testing the website and not being able to sign up. I decided that I should make it clear what would be accepted as a username, password etc. (A-Z, numbers but not special characters).
 
 ## Scope
-* Users can find meat based recipes to cook themselves
+* Users can find meat-based recipes to cook themselves
 * Users can sign up to the website
 * User can submit their own recipes to the website
 * Users can edit and delete their recipes from the website
@@ -219,7 +219,7 @@ I used the [W3C HTML Validator](https://validator.w3.org) to check the validity 
 * Once logged in via one of the many options above, an ‘Add Recipe’ item will appear in the main navigation. The Add Recipe page is a simple form-based page which the user can fill out to be able to add their own recipes.
 * The form also includes some additional instructions for the user to follow when uploading their recipes to assist them with the process.
 
-*As a frequent user, I want to be find new recipes to cook*
+*As a frequent user, I want to find new recipes to cook*
 * Recipes on the ‘Find a Recipe’ page have been organised to display the newest recipes first, making it easy for a returning visitor to be able to view new recipes, rather than need to look for them.
 
 *As a frequent user, I want to be able to share recipes that I like to my social network pages*
@@ -343,6 +343,8 @@ Sans Serif: I wanted to keep the body copy of the website clear, modern and easy
 ## Acknowledgements
 
 Special Thank you to my fantastic mentor ADEGBENGA ADEYE for helping me with my ideas and directing me on how to fix errors and bugs.
+
+A huge thank you to fellow student and slack member Mark O'Beirne for reviewing my website in great detail in the Peer-Code-Review channel and making some suggestions for improving the website.
 
 Thank you to Slack members and Pauld0051for testing out the website and highlighting a display issue on his mobile, and Ivan Branimir Skoric for his help in directing me to the answers I needed for internal page linking.
 
