@@ -59,7 +59,7 @@ Below are is the homepage wireframes for desktop, mobile and tablet, with both n
 ![Homepage Wireframes Desktop](static/readme_docs/wireframes_desktop.jpg)
 ![Homepage Wireframes Device](static/readme_docs/wireframes_device.jpg)
 
-## Changes to wireframes:
+## Changes to Wireframes:
 Whilst I was in the process of building the website, I decided to make a few small amends to my initial wireframes.
 
 Removal of Delete button from Find Recipe page: I decided to only have the ‘delete recipe’ button within the ‘Edit Recipe’ page rather than the Find a Recipe page also. I felt that there were too many buttons on the ‘Find a Recipe’ page and I did not want to confuse users or take away from the main part of the page – viewing the recipes themselves. Removing the Delete button from this section made the page much cleaner and improved usability of the page.
@@ -101,7 +101,7 @@ Adding form helpers: I decided to add form helper information to the following p
 Here are some screenshots of the flashes which appear on the website.
 ![Website Flashes](static/readme_docs/flashes.jpg)
 
-### Features to add in the future
+### Features to Add in The Future
 There are several features I would like to add to the website in the future. I am not at the skill level to include these now, but would like to come back to them to do so.
 **Save/favourite recipes:** Signed in users would have the ability to save their favourite recipes so they can easily come back to them in the future, and time and time again.
 **Send recipe to site owner for approval before posting:** This would eliminate spam postings and also low quality or inappropriate posts. For now, these need to be manually looked over frequently.
@@ -109,7 +109,7 @@ There are several features I would like to add to the website in the future. I a
 
 
 
-## Schema design
+## Schema Design
 After carefully considering the elements of the website and the items needed to be stored in and retrieved from the database, I designed the schema to have 3 collections:
 
 **users:** for sign up and sign in
@@ -271,7 +271,7 @@ MONGO_DBNAME | meatblog
 7. In Deploy, I clicked ‘Enable Automatic Deploys’ and deployed from the Master branch.
 8.	Follow this I then clicked ‘Deploy Branch’ and the app was deployed successfully at the URL metablog.herokuapp.com
 
-### To create a clone of the Meatblog repository and run locally
+### To Create a Clone of the Meatblog Repository and Run Locally
 Cloning the repository makes a copy of the of the repository which you download and store on your machine locally.
 
 To make a clone of Meatblog, follow the following steps:

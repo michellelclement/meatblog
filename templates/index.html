@@ -155,10 +155,16 @@
 <div class="col s12 center-align submit-recipe-section">
   <h1>Submit your own recipe</h1>
   <p>
-    Do you have a tasty, meat based recipe you would like to share?<br />Create
-    an account quickly and for free and post away! Already have an account? Sign
-    In to start posting.
+    Do you have a tasty, meat based recipe you would like to share?<br />
+    You just need an account and you can post away!
   </p>
+  {% if session.user %}
+  <a
+    href="{{ url_for('add_recipe') }}"
+    class="waves-effect waves-light btn red lighten-2 about-btn center-block"
+    >Add Recipe</a
+  >
+  {% else %}
   <a
     href="{{ url_for('sign_up') }}"
     class="waves-effect waves-light btn red lighten-2 about-btn"
@@ -169,6 +175,7 @@
     class="waves-effect waves-light btn red lighten-2 about-btn center-block"
     >Sign In</a
   >
+  {% endif %}
 </div>
 
 {% endblock %}
