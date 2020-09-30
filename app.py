@@ -41,8 +41,8 @@ def sign_up():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            return redirect(url_for("sign_up"))
             flash("Username already exists")
+            return redirect(url_for("sign_up"))
 
         sign_up = {
             "username": request.form.get("username").lower(),
@@ -90,10 +90,13 @@ def sign_in():
 # Log out function
 @app.route("/sign_out")
 def sign_out():
-    # Remove user from session cookies
-    flash("You have been signed out")
-    session.pop("user")
-    return redirect(url_for("sign_in"))
+    if 'user' in session:
+        flash("You have been signed out")
+        session.pop("user")
+        return redirect(url_for("sign_in"))
+
+    else:
+        return redirect(url_for("home")
 
 
 # Add a Recipe Function
