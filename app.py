@@ -90,6 +90,7 @@ def sign_in():
 @app.route("/sign_out")
 def sign_out():
     if 'user' in session:
+        session.pop("user")
         flash("You have been signed out")
         return redirect(url_for("home"))
 
