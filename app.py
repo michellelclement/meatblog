@@ -104,7 +104,6 @@ def sign_out():
 def add_recipe():
     if request.method == "POST":
         todays_date = datetime.today().strftime('%Y-%m-%d')
-        print(todays_date)
         recipe = {
             "category": request.form.get("category"),
             "recipe_name": request.form.get("recipe_name"),
@@ -114,7 +113,6 @@ def add_recipe():
             "created_by": session["user"],
             "date_added": todays_date
         }
-        print(recipe)
 
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
@@ -136,13 +134,15 @@ def view_recipe(recipe_id):
 def edit_recipe(recipe_id):
     # Following code to edit recipe and update database
     if request.method == "POST":
+        todays_date = datetime.today().strftime('%Y-%m-%d')
         submit = {
             "category": request.form.get("category"),
             "recipe_name": request.form.get("recipe_name"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_method": request.form.get("recipe_method"),
             "image_url": request.form.get("image_url"),
-            "created_by": session["user"]
+            "created_by": session["user"],
+            "date_added": todays_date
         }
 
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
