@@ -4,6 +4,7 @@ from flask import Flask, flash, render_template, \
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import datetime
 if os.path.exists("env.py"):
     import env
 
@@ -29,16 +30,7 @@ def home():
 
 @app.route("/find_recipe")
 def find_recipe():
-    recipes = mongo.db.recipes.find()
-    
-    for recipe in recipes:
-        print(f"Unsorted recipes one by one: {recipe}")
-    
     recipes = mongo.db.recipes.find().sort("date_added")
-    
-    print("SORTED recipes one by one:")
-    for recipe in recipes:
-        print(recipe)
     return render_template("recipes.html", recipes=recipes)
 
 
