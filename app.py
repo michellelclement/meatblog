@@ -30,7 +30,7 @@ def home():
 
 @app.route("/find_recipe")
 def find_recipe():
-    recipes = mongo.db.recipes.find().sort("date_added")
+    recipes = mongo.db.recipes.find().sort("date_added", -1)
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -103,6 +103,8 @@ def sign_out():
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
+        todays_date = datetime.today().strftime('%Y-%m-%d')
+        print(todays_date)
         recipe = {
             "category": request.form.get("category"),
             "recipe_name": request.form.get("recipe_name"),
@@ -110,8 +112,9 @@ def add_recipe():
             "recipe_method": request.form.get("recipe_method"),
             "image_url": request.form.get("image_url"),
             "created_by": session["user"],
-            "date_added": request.form.get("date_added")
+            "date_added": todays_date
         }
+        print(recipe)
 
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
@@ -163,4 +166,4 @@ def delete_recipe(recipe_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=False)
+            debug=True)
