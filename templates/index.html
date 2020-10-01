@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block content %}
 
 <!-- Main Homepage Image -->
-<div class="row main-image-row">
+<section class="row main-image-row">
   <div class="col m8 s12 main-image">
     <img
       class="responsive-img"
@@ -20,7 +20,7 @@
   </div>
 
   <!-- Top right Image Box - top -->
-  <div class="col m4 s6 homepage-sml-img">
+  <aside class="col m4 s6 homepage-sml-img">
     <a href="{{ url_for('sign_up') }}"
       ><img
         class="responsive-img"
@@ -31,10 +31,10 @@
         <h3>Sign up and publish your own recipes</h3>
       </div>
     </a>
-  </div>
+  </aside>
 
   <!-- Top right Image Box - bottom -->
-  <div class="col m4 s6 homepage-sml-img" id="bottom-right-image">
+  <aside class="col m4 s6 homepage-sml-img" id="bottom-right-image">
     <a href="https://meatboxlondon.co.uk/" target="_blank">
       <img
         class="responsive-img"
@@ -45,11 +45,11 @@
         <h3>Fresh meat delivered to your door</h3>
       </div>
     </a>
-  </div>
-</div>
+  </aside>
+</section>
 
 <!-- About Section -->
-<div class="about-container" id="about-section">
+<section class="about-container" id="about-section">
   <div class="row about-row center-align">
     <div class="col s12 m6 grey lighten-2 about-col center-block">
       <h2>About Meatblog</h2>
@@ -92,7 +92,7 @@
       >
     </div>
   </div>
-</div>
+</section>
 
 <!-- Recipe of the Month -->
 <div class="container center-align recipe-of-month-title">
@@ -152,7 +152,7 @@
 </section>
 
 <!-- Submit Your Own Recipe -->
-<div class="col s12 center-align submit-recipe-section">
+<section class="col s12 center-align submit-recipe-section">
   <h1>Submit your own recipe</h1>
   <p>
     Do you have a tasty, meat based recipe you would like to share?<br />
@@ -176,6 +176,6 @@
     >Sign In</a
   >
   {% endif %}
-</div>
+</section>
 
 {% endblock %}

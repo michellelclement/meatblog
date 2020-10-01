@@ -1,14 +1,14 @@
 {% extends "base.html" %} {% block content %}
 
-<div class="container center-align">
+<section class="container center-align">
 	<div class="row">
 		<div class="col s12">
 			<h1>Add a Recipe</h1>
 		</div>
 	</div>
-</div>
+</section>
 
-<div class="row card-panel">
+<section class="row card-panel">
 	<form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
 		<!-- Category Selector -->
 		<div class="row Grey lighten-1">
@@ -107,7 +107,7 @@
 				</div>
 			</div>
 	</form>
-</div>
+</section>
 
 <script src="{{ url_for('static', filename='js/add_recipe.js') }}"></script>
 

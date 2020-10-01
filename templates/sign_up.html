@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
 
-<div class="container center-align">
+<section class="container center-align">
   <div class="row">
     <div class="col s12">
       <h1>Sign Up</h1>
@@ -10,8 +10,9 @@
       </p>
     </div>
   </div>
-</div>
-<div class="row">
+</section>
+<!-- Sign in form -->
+<section class="row">
   <form class="col s12" method="POST" action="{{ url_for('sign_up') }}">
     <div class="card-panel">
       <!-- Username -->
@@ -30,8 +31,9 @@
           />
           <label for="username">Username</label>
           <span class="helper-text"
-          >Please enter the username you wish to use to sign up. This can consist of letters and numbers only, no special characters.</span
-        >
+            >Please enter the username you wish to use to sign up. This can
+            consist of letters and numbers only, no special characters.</span
+          >
         </div>
       </div>
       <!-- Password -->
@@ -50,8 +52,10 @@
           />
           <label for="password">Password</label>
           <span class="helper-text"
-          >Please enter the password you wish to use to log into the site in the future. This can consist of letters and numbers only and is case sensitive. No special characters.</span
-        >
+            >Please enter the password you wish to use to log into the site in
+            the future. This can consist of letters and numbers only and is case
+            sensitive. No special characters.</span
+          >
         </div>
       </div>
 
@@ -63,15 +67,15 @@
       </div>
     </div>
   </form>
-</div>
+</section>
 
 <!-- Already Registered? -->
-<div class="row">
+<section class="row">
   <div class="col s12">
     <p class="center-align">
       Already registered?<a href="{{ url_for('sign_in') }}"> Sign in here</a>
     </p>
   </div>
-</div>
+</section>
 
 {% endblock %}

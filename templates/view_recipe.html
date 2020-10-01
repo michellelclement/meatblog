@@ -1,40 +1,45 @@
 {% extends "base.html" %} {% block content %}
 
-<div class="container center-align">
-	<div class="row">
-		<div class="col s12">
-			<h1>"{{ recipe.recipe_name }}"</h1>
-		</div>
-	</div>
-</div>
-
-<div class="row recipe_details">
-	<div class="col l6 s12 recipe-info-text">
-		<div class="card-panel">
-			<h2>Ingredients</h2>
-			{% for ingredient in recipe.recipe_ingredients.splitlines() %}
-			<p>{{ ingredient }}</p>
-			{% endfor %}
-			<h2>Method</h2>
-			{% for method in recipe.recipe_method.splitlines() %}
-			<p>{{ method }}</p>
-			{% endfor %}
-			<div id="recipe-by">
-				<h3>Recipe posted by: {{ recipe.created_by }}</h3>
-				<p>Recipe posted on: {{ recipe.date_added }}</p>
-				<!-- Share Buttons, from sharethis.com -->
-				<h4>Share this recipe</h4>
-				<div class="sharethis-inline-share-buttons"></div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Recipe Image -->
-	<div class="col l6 s12 recipe-image">
-		<div class="card-panel">
-			<img class="responsive-img" src="{{ recipe.image_url }}" alt="image of {{ recipe.recipe_name }}"/>
+<section class="container center-align">
+  <div class="row">
+    <div class="col s12">
+      <h1>"{{ recipe.recipe_name }}"</h1>
     </div>
-		</div>
-	</div>
+  </div>
+</section>
 
-	{% endblock %}
+<!-- Rectipe Details -->
+<section class="row recipe_details">
+  <div class="col l6 s12 recipe-info-text">
+    <div class="card-panel">
+      <h2>Ingredients</h2>
+      {% for ingredient in recipe.recipe_ingredients.splitlines() %}
+      <p>{{ ingredient }}</p>
+      {% endfor %}
+      <h2>Method</h2>
+      {% for method in recipe.recipe_method.splitlines() %}
+      <p>{{ method }}</p>
+      {% endfor %}
+      <div id="recipe-by">
+        <h3>Recipe posted by: {{ recipe.created_by }}</h3>
+        <p>Recipe posted on: {{ recipe.date_added }}</p>
+        <!-- Share Buttons, from sharethis.com -->
+        <h4>Share this recipe</h4>
+        <div class="sharethis-inline-share-buttons"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recipe Image -->
+  <div class="col l6 s12 recipe-image">
+    <div class="card-panel">
+      <img
+        class="responsive-img"
+        src="{{ recipe.image_url }}"
+        alt="image of {{ recipe.recipe_name }}"
+      />
+    </div>
+  </div>
+</section>
+
+{% endblock %}
