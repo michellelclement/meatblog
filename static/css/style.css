@@ -206,6 +206,15 @@ footer {
 
 /* Find A Recipe Page */
 
+.find_recipe_col {
+  float: none !important;
+  margin: 60px auto;
+}
+
+.find_recipe_col > .input-field {
+    margin: 50px 0px;
+}
+
 .recipes h5 {
   color: white;
 }
