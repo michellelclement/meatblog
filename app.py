@@ -160,9 +160,9 @@ def find_recipe():
 # Search for a recipe
 @app.route("/search", methods=["GET", "POST"])
 def search():
-    search_results = mongo.db.recipes.find(
-        {"in": {"$search": request.form["search"]}}
-    )
+    search = "." + request.form["search"] + "."
+    search_results = mongo.db.recipes.find({"recipes": search})
+    print("search")
     return render_template("recipes.html", recipes=search_results)
 
 
