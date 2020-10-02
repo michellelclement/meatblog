@@ -24,7 +24,7 @@ You can view the live website here: [Meatblog](https://meatblog.herokuapp.com/)
 1. [**UX**](#UX)
     -  [**User Stories**](#user-stories)
 2. [**Wireframes**](#wireframes)
-3. [**Scope**](#scope
+3. [**Scope**](#scope)
 4. [**Features**](#existing-website-features)
     -  [**Features To Add In The Future**](#features-to-add-in-the-future)
 5. [**Schema Design**](#schema-design)
@@ -35,10 +35,11 @@ You can view the live website here: [Meatblog](https://meatblog.herokuapp.com/)
 9. [**Deployment**](#deployment)
     -  [**Deploying to Heroku**](#deploying-website-to-heroku)
     -  [**Clone & Run Locally**](#to-create-a-clone-of-the-meatblog-repository-and-run-locally)
-10. [**Secret Key & Key Variables**](#secret-key-and-key-variables)
+10. [**Secret Key & Key Variables**](#secret-key-&-key-variables)
 11. [**Design**](#design)
 12. [**Credits**](#credits)
 13. [**Acknowledgements**](#acknowledgements)
+
 
 ## UX
 The site owner is a fan of cooking and cooking meat-based dishes. As a contrast to the many meat-free/vegan websites which has become popular in recent years, they wish to create a recipe website based solely on meat dishes.
