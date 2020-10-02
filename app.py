@@ -19,7 +19,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 # Code as directed by Data Centric Development module
-# Modified, added to and rewritten for prjoect
+# Modified, added to and rewritten for project
 
 
 @app.route("/")
@@ -157,10 +157,10 @@ def find_recipe():
 
 
 # Search for a recipe
-@app.route("/find_recipe", methods=["GET", "POST"])
+@app.route("/search", methods=["GET", "POST"])
 def search():
     search_results = mongo.db.recipes.find(
-        {"text": {"$search": request.form["search"]}}
+        {"in": {"$search": request.form["search"]}}
     )
     return render_template("recipes.html", recipes=search_results)
 
