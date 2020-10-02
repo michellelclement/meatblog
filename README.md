@@ -269,7 +269,7 @@ I used the [W3C HTML Validator](https://validator.w3.org) to check the validity 
 * Additionally, there are 2 further CTA’s to show the user of the site where they can order fresh meat – in the main images at the top of the page, and in the about section.
 * Thanks to the website being a meat based blog, links to an external meat delivery service fit in to the theme perfectly.
 
-[View the full testing document here:](static/readme_docs/full_testing_document.pdf)
+[View the full testing document here](static/readme_docs/full_testing_document.pdf)
 
 
 ## Deployment
@@ -335,6 +335,8 @@ To stop this file being pushed to GitHub when commits are made and pushed, I cre
 
 
 ## Design
+
+![Design](static/readme_docs/design.jpg)
 
 **Colours:**
 I wanted to keep the colour pallet simple with minimal colours, just using one main colour plus white, greys and black. As I was using Materialize, I chose to go with their ‘red lighten range’ as I liked how each colour looked on its own, and it gave me the flexibility to use different ‘lighten’ values for highlighting different content and colouring buttons. The colour is called red; however, the lighter values were more of a pink/salmon colour, which I really liked.
