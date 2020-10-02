@@ -20,12 +20,34 @@ Meatblog was a site idea I previously had a go at designing and building some ye
 
 You can view the live website here: [Meatblog](https://meatblog.herokuapp.com/)
 
+## Contents
+1. [**UX**](#UX)
+    -  [**User Stories**](#user-stories)
+2. [**Wireframes**](#wireframes)
+3. [**Scope**](#scope
+4. [**Features**](#existing-website-features)
+    -  [**Features To Add In The Future**](#features-to-add-in-the-future)
+5. [**Schema Design**](#schema-design)
+6. [**Technologies Used**](#technologies-used)
+7. [**Tools Used**](#tools-used)
+8. [**Testing**](#testing)
+    -  [**User Story Testing**](#user-stories-testing)
+9. [**Deployment**](#deployment)
+    -  [**Deploying to Heroku**](#deploying-website-to-heroku)
+    -  [**Clone & Run Locally**](#to-create-a-clone-of-the-meatblog-repository-and-run-locally)
+10. [**Secret Key & Key Variables**](#secret-key-and-key-variables)
+11. [**Design**](#design)
+12. [**Credits**](#credits)
+13. [**Acknowledgements**](#acknowledgements)
+
 ## UX
 The site owner is a fan of cooking and cooking meat-based dishes. As a contrast to the many meat-free/vegan websites which has become popular in recent years, they wish to create a recipe website based solely on meat dishes.
 
 The website provides some recipes from the site owner for others to share and follow, but also encourage other users to create a free account and share recipes of their own.
 
 The website makes creating, reading, updating and deleting recipes easy and straightforward for external users, with the ability to share recipes to social channels.
+
+## User Stories
 
 ## New External User Goals:
 * As a new user, I want to be able to view recipes to cook
@@ -103,8 +125,11 @@ Here are some screenshots of the flashes which appear on the website.
 
 ### Features to Add in The Future
 There are several features I would like to add to the website in the future. I am not at the skill level to include these now, but would like to come back to them to do so.
+
 **Save/favourite recipes:** Signed in users would have the ability to save their favourite recipes so they can easily come back to them in the future, and time and time again.
+
 **Send recipe to site owner for approval before posting:** This would eliminate spam postings and also low quality or inappropriate posts. For now, these need to be manually looked over frequently.
+
 **Search or filter functionality:** There would hopefully come a time when the website has so many recipes they need to be whittled down. I would like to add a filter function which could include specific ingredients, or a search function for the same.
 
 
@@ -262,11 +287,11 @@ By deploying Meatblog to Heroku, I was able to run my Python app and view a live
 
 Config Vars | Config Vars
 ------------ | -------------
-IP | 0.0.0.0
-PORT | 5000
-SECRET_KEY | (hidden - entered from eny.py)
-MONGO_URI | (hidden - entered from eny.py)
-MONGO_DBNAME | meatblog
+IP | To be added by user
+PORT | To be added by user
+SECRET_KEY | To be added by user
+MONGO_URI | To be added by user
+MONGO_DBNAME | To be added by user
 
 7. In Deploy, I clicked ‘Enable Automatic Deploys’ and deployed from the Master branch.
 8.	Follow this I then clicked ‘Deploy Branch’ and the app was deployed successfully at the URL metablog.herokuapp.com
@@ -283,11 +308,11 @@ To make a clone of Meatblog, follow the following steps:
 1. All the files will now be cloned into your chosen workspace.
 1. Add a env.py file with the following details:
 	    Import os
-	    os.environ.setdefault("IP", "0.0.0.0")
-        os.environ.setdefault("PORT", "5000")
-        os.environ.setdefault("SECRET_KEY", "your secret key here")
-        os.environ.setdefault("MONGO_URI", "Your URI here")
-        os.environ.setdefault("MONGO_DBNAME", "Your database name here")
+	    os.environ.setdefault("IP", "To be added by user")
+        os.environ.setdefault("PORT", "To be added by user")
+        os.environ.setdefault("SECRET_KEY", "To be added by user")
+        os.environ.setdefault("MONGO_URI", "To be added by user")
+        os.environ.setdefault("MONGO_DBNAME", "To be added by user")
 
 Do not commit this page.
 
