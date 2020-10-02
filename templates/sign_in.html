@@ -1,25 +1,25 @@
 {% extends "base.html" %} {% block content %}
 
 <section class="container center-align">
-	<div class="row">
-		<div class="col s12">
-			<h1>Sign In</h1>
-			<p>
-				Sign in to your account to update your recipes, or to share new recipes.
-			</p>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col s12">
+      <h1>Sign In</h1>
+      <p>
+        Sign in to your account to update your recipes, or to share new recipes.
+      </p>
+    </div>
+  </div>
 </section>
 
 <!-- Sign in form -->
 <section class="row">
-	<form class="col s12" method="POST" action="{{ url_for('sign_in') }}">
-		<div class="card-panel">
-			<!-- Username -->
-			<div class="row">
-				<div class="input-field col s12">
-					<i class="far fa-user-circle prefix"></i>
-					<input
+  <form class="col s12" method="POST" action="{{ url_for('sign_in') }}">
+    <div class="card-panel">
+      <!-- Username -->
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="far fa-user-circle prefix"></i>
+          <input
             id="username"
             name="username"
             type="text"
@@ -29,14 +29,14 @@
             class="validate"
             required
           />
-					<label for="username">Username</label>
-				</div>
-			</div>
-			<!-- Password -->
-			<div class="row">
-				<div class="input-field col s12">
-					<i class="fas fa-unlock prefix"></i>
-					<input
+          <label for="username">Username</label>
+        </div>
+      </div>
+      <!-- Password -->
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="fas fa-unlock prefix"></i>
+          <input
             id="password"
             name="password"
             type="password"
@@ -46,27 +46,27 @@
             class="validate"
             required
           />
-					<label for="password">Password</label>
-				</div>
-			</div>
+          <label for="password">Password</label>
+        </div>
+      </div>
 
-			<!-- Register -->
-			<div class="row">
-				<button type="submit" class="col s12 btn-large red lighten-2">
+      <!-- Register -->
+      <div class="row">
+        <button type="submit" class="col s12 btn-large red lighten-2">
           Sign In
         </button>
-			</div>
-		</div>
-	</form>
+      </div>
+    </div>
+  </form>
 </section>
 
 <!-- New here? Sign up -->
 <section class="row">
-	<div class="col s12">
-		<p class="center-align">
-			New here?<a href="{{ url_for('sign_up') }}"> Sign up here</a>
-		</p>
-	</div>
+  <div class="col s12">
+    <p class="center-align">
+      New here?<a href="{{ url_for('sign_up') }}"> Sign up here</a>
+    </p>
+  </div>
 </section>
 
 {% endblock %}

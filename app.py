@@ -28,12 +28,6 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/find_recipe")
-def find_recipe():
-    recipes = mongo.db.recipes.find().sort("date_added", -1)
-    return render_template("recipes.html", recipes=recipes)
-
-
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
     if request.method == "POST":
@@ -122,13 +116,6 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
-# View Recipe
-@app.route("/view_recipe/<recipe_id>", methods=['GET'])
-def view_recipe(recipe_id):
-    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("view_recipe.html", recipe=recipe)
-
-
 # Edit Recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
@@ -160,9 +147,31 @@ def edit_recipe(recipe_id):
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
-    return redirect(url_for("find_recipe"))
 
 
+# Find a Recipe page
+@app.route("/find_recipe")
+def find_recipe():
+    recipes = mongo.db.recipes.find().sort("date_added", -1)
+    return render_template("recipes.html", recipes=recipes)
+
+
+# Search for a recipe
+@app.route("/find_recipe", methods=["GET", "POST"])
+def search():
+    search_results = mongo.db.recipes.find(
+        {"text": {"$search": request.form["search"]}}
+    )
+    return render_template("recipes.html", recipes=search_results)
+
+
+# View Recipe
+@app.route("/view_recipe/<recipe_id>", methods=['GET'])
+def view_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("view_recipe.html", recipe=recipe)
+
+    
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
