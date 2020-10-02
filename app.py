@@ -147,6 +147,7 @@ def edit_recipe(recipe_id):
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
+    return redirect(url_for("find_recipe"))
 
 
 # Find a Recipe page
