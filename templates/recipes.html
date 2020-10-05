@@ -4,18 +4,22 @@
   <div class="row center-align">
     <div class="col s12 m6 find_recipe_col">
       <h1>Find a Recipe</h1>
-      <div class="input-field col s12">
-        <i class="fas fa-search prefix"></i>
-        <input id="search" name="search" type="text" />
-        <label for="search">Search for terms such as 'Beef' or 'Buffalo Wings'</label>
-        <button
-          id="search-button"
-          type="submit"
-          class="col s12 btn-large red lighten-2"
-        >
-          Search
-        </button>
-      </div>
+      <form method="POST" action="search">
+        <div class="input-field col s12">
+          <i class="fas fa-search prefix"></i>
+          <input id="search" name="search" type="text" />
+          <label for="search"
+            >Search for terms such as 'Beef' or 'Buffalo Wings'</label
+          >
+          <button
+            id="search-button"
+            type="submit"
+            class="col s12 btn-large red lighten-2"
+          >
+            Search
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </section>

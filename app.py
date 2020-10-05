@@ -1,3 +1,4 @@
+import re
 import os
 from flask import Flask, flash, render_template, \
       redirect, request, session, url_for
@@ -160,9 +161,13 @@ def find_recipe():
 # Search for a recipe
 @app.route("/search", methods=["GET", "POST"])
 def search():
-    search = "." + request.form["search"] + "."
-    search_results = mongo.db.recipes.find({"recipes": search})
-    print("search")
+    rgx = re.compile('.*' + request.form["search"] + '.*', re.IGNORECASE)  # compile the regex
+    search_results = mongo.db.recipes.find({'recipes':rgx})
+    # search = "." + request.form["search"] + "."
+    # search_results = mongo.db.recipes.find({"recipes": search})
+    # for doc in search_results:
+    print(search_results)
+
     return render_template("recipes.html", recipes=search_results)
 
 
