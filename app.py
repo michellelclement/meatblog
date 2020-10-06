@@ -158,25 +158,23 @@ def find_recipe():
     return render_template("recipes.html", recipes=recipes)
 
 
-# Search for a recipe
-@app.route("/search", methods=["GET", "POST"])
-def search():
-    search = request.form["search"]
-    search_results = mongo.db.recipes.find({"recipe_name": search})
-    print(search_results.count())
-    # for doc in search_results:
-        # print(doc['recipe_name'])
-
-    return render_template("search_results.html", search_results=search_results)
-
-
 # View Recipe
 @app.route("/view_recipe/<recipe_id>", methods=['GET'])
 def view_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("view_recipe.html", recipe=recipe)
 
-    
+
+# Search for a recipe
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    search = request.form["search"]
+    search_results = mongo.db.recipes.find({"recipe_name": search})
+
+    return render_template("search_results.html", search_results=search_results)
+
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
