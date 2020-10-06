@@ -1,66 +1,26 @@
 {% extends "base.html" %} {% block content %}
 
 <section class="container">
-  <div class="row center-align">
-    <div class="col s12 m6 find_recipe_col">
-      <h1>Search Results</h1>
-
-      {% for doc in search_results %} 
-      {{ doc }} 
-      {% endfor %}
-
-    </div>
-  </div>
+	<div class="row center-align">
+		<div class="col s12 m6 find_recipe_col">
+			<h1>Search Results</h1>
+		</div>
+	</div>
 </section>
 
-<!-- Collapsible
+<!-- Collapsible -->
 <section class="container">
-  <ul class="collapsible recipe-list">
-     {% for doc in search_results %}
-    <li>
-      <div class="row recipes collapsible-header white-text red lighten-3">
-        <div class="recipes-img col s12 m3">
-          <img
-            class="responsive-img"
-            src="{{ doc.image_url }}"
-            alt="image of {{ doc.recipe_name }}"
-          />
-        </div>
+	<ul class="collapsible recipe-list">
+		{% for doc in search_results %}
+		<li>
+			<div class="row recipes collapsible-header white-text red lighten-3">
 
-        <div class="col s12 m7">
-          <h5><i class="fas fa-utensils"></i>{{ recipe.recipe_name }}</h5>
-          {{ recipe.category }}
-          <p><em>by: {{ doc.created_by }}</em></p>
-          <p><em>by: {{ doc.date_added }}</em></p>
-        </div>
-
-        <div class="col s12 m2 recipe-buttons not-collapse left-align">
-          <a
-            href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"
-            class="waves-effect waves-light btn view-btn red lighten-5"
-            >View Recipe</a
-          >
-        </div>
-      </div>  -->
-
-<!-- Expandable Content 
-      <div class="col s9"></div>
-      <div class="collapsible-body">
-        <div>
-          <h2>Ingredients</h2>
-          {% for ingredient in recipe.recipe_ingredients.splitlines() %}
-          <p>{{ ingredient }}</p>
-          {% endfor %}
-          <a
-            href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"
-            class="waves-effect waves-light btn view-btn red lighten-5"
-            >View Recipe</a
-          >
-        </div>
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
-</section> -->
-
-{% endblock %}
+				<div class="col s12 m7">
+					<h5><i class="fas fa-utensils"></i>{{ doc.recipe_name }}</h5>
+					{{ doc.category }}
+					<p><em>by: {{ doc.created_by }}</em></p>
+					<p><em>by: {{ doc.date_added }}</em></p>
+				</div>
+			</div>
+			{% endfor %}
+			{% endblock %}
