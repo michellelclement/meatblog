@@ -161,14 +161,15 @@ def find_recipe():
 # Search for a recipe
 @app.route("/search", methods=["GET", "POST"])
 def search():
-    rgx = re.compile('.*' + request.form["search"] + '.*', re.IGNORECASE)  # compile the regex
-    search_results = mongo.db.recipes.find({'recipes':rgx})
-    # search = "." + request.form["search"] + "."
-    # search_results = mongo.db.recipes.find({"recipes": search})
-    # for doc in search_results:
-    print(search_results)
+    # rgx = re.compile('.*' + request.form["search"] + '.*', re.IGNORECASE)  # compile the regex
+    # search_results = mongo.db.recipes.find({'recipes': rgx})
+    search = request.form["search"]
+    search_results = mongo.db.recipes.find({"recipe_name": search})
+    print(search_results.count())
+    for doc in search_results:
+        print(doc['category'])
 
-    return render_template("recipes.html", recipes=search_results)
+    return render_template("search_results.html", recipes=search_results)
 
 
 # View Recipe

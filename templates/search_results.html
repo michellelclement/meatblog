@@ -1,0 +1,89 @@
+{% extends "base.html" %} {% block content %}
+
+<section class="container">
+  <div class="row center-align">
+    <div class="col s12 m6 find_recipe_col">
+      <h1>Search Results</h1>
+    111
+      {% for doc in search_results %} 
+      ${{ doc.category }} 
+      {% endfor %}
+
+      <!--  <form method="POST" action="search">
+        <div class="input-field col s12">
+          <i class="fas fa-search prefix"></i>
+          <input id="search" name="search" type="text" />
+          <label for="search"
+            >Search for terms such as 'Beef' or 'Buffalo Wings'</label
+          >
+          <button
+            id="search-button"
+            type="submit"
+            class="col s12 btn-large red lighten-2"
+          >
+            Search
+          </button>
+        </div>
+      </form> -->
+    </div>
+  </div>
+</section>
+
+<!-- Collapsible 
+<section class="container">
+  <ul class="collapsible recipe-list">
+    {% for recipe in search_results %}
+    <li>
+      <div class="row recipes collapsible-header white-text red lighten-3">
+        <div class="recipes-img col s12 m3">
+          <img
+            class="responsive-img"
+            src="{{ recipe.image_url }}"
+            alt="image of {{ recipe.recipe_name }}"
+          />
+        </div>
+
+        <div class="col s12 m7">
+          <h5><i class="fas fa-utensils"></i>{{ recipe.recipe_name }}</h5>
+          {{ recipe.category }}
+          <p><em>by: {{ recipe.created_by }}</em></p>
+          <p><em>by: {{ recipe.date_added }}</em></p>
+        </div>
+
+        <div class="col s12 m2 recipe-buttons not-collapse left-align">
+          <a
+            href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"
+            class="waves-effect waves-light btn view-btn red lighten-5"
+            >View Recipe</a
+          >
+          {% if session.user|lower == recipe.created_by|lower %}
+          <a
+            href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+            class="waves-effect waves-light not-collapse btn red lighten-2"
+            >Edit Recipe</a
+          >
+          {% endif %}
+        </div>
+      </div> -->
+
+<!-- Expandable Content 
+      <div class="col s9"></div>
+      <div class="collapsible-body">
+        <div>
+          <h2>Ingredients</h2>
+          {% for ingredient in recipe.recipe_ingredients.splitlines() %}
+          <p>{{ ingredient }}</p>
+          {% endfor %}
+          <a
+            href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"
+            class="waves-effect waves-light btn view-btn red lighten-5"
+            >View Recipe</a
+          >
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section> -->
+
+{% endblock %}
