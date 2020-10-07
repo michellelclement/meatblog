@@ -13,14 +13,14 @@
   <div class="col l6 s12 recipe-info-text">
     <div class="card-panel">
       <h2>Ingredients</h2>
-      {% for ingredient in recipe.recipe_ingredients.splitlines() %}
+      {% for ingredient in search_results.recipe_ingredients.splitlines() %}
       <p>{{ ingredient }}</p>
       {% endfor %}
       <h2>Method</h2>
       <p>{{ method }}</p>
       <div id="recipe-by">
-        <h3>Recipe posted by: {{ recipe.created_by }}</h3>
-        <p>Recipe posted on: {{ recipe.date_added }}</p>
+        <h3>Recipe posted by: {{ search_results.created_by }}</h3>
+        <p>Recipe posted on: {{ search_results.date_added }}</p>
         <!-- Share Buttons, from sharethis.com -->
         <h4>Share this recipe</h4>
         <div class="sharethis-inline-share-buttons"></div>
