@@ -174,6 +174,12 @@ def search():
     return render_template("search_results.html", search_results=search_results)
 
 
+# View searched recipe result
+@app.route("/view_search_result/<recipe_id>", methods=['GET'])
+def view_search_result(recipe_id):
+    search_results = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("view_search_result.html", search_results=search_results)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
