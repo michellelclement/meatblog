@@ -1,4 +1,3 @@
-import re
 import os
 from flask import Flask, flash, render_template, \
       redirect, request, session, url_for
@@ -169,16 +168,16 @@ def view_recipe(recipe_id):
 @app.route("/search", methods=["GET", "POST"])
 def search():
     search = request.form["search"]
-    search_results = mongo.db.recipes.find({"recipe_name": search})
-
-    return render_template("search_results.html", search_results=search_results)
+    recipes = mongo.db.recipes.find({"recipe_name" : {"$regex": search}})
+    ingredients = mongo.db.recipes.find({"recipe_ingredients" : {"$regex": search}})
+    return render_template("search_results.html", recipes=recipes, ingredients=ingredients)
 
 
 # View searched recipe result
 @app.route("/view_search_result/<recipe_id>", methods=['GET'])
 def view_search_result(recipe_id):
     search_results = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("view_search_result.html", search_results=search_results)
+    return render_template("view_search_result.html", search_results)
 
 
 if __name__ == "__main__":
