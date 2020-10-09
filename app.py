@@ -168,11 +168,18 @@ def view_recipe(recipe_id):
 @app.route("/search", methods=["GET", "POST"])
 def search():
     search = request.form["search"]
-    recipes = mongo.db.recipes.find({"recipe_name": {"$regex": search}})
+    print(search)
+    recipes = mongo.db.recipes.find({"recipe_name": {"$regex": search, '$options': 'i'}})
+    recipesNum = mongo.db.recipes.find({"recipe_name": {"$regex": search, '$options': 'i'}}).count()
+    print(recipesNum)
     ingredients = mongo.db.recipes.find({"recipe_ingredients":
-                                        {"$regex": search}})
+                                        {"$regex": search, '$options': 'i'}})
+    ingredientsNum = mongo.db.recipes.find({"recipe_ingredients":
+                                        {"$regex": search, '$options': 'i'}}).count()                                    
+    print(ingredientsNum)
     return render_template("search_results.html",
-                           recipes=recipes, ingredients=ingredients)
+                           recipes=recipes, ingredients=ingredients,
+                           recipesNum=recipesNum, ingredientsNum=ingredientsNum)
 
 
 # View searched recipe result

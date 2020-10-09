@@ -4,12 +4,16 @@
   <div class="row center-align">
     <div class="col s12 m6 find_recipe_col">
       <h1>Search Results</h1>
+      <p>Want to search again?</p>
+      <a href="{{ url_for('find_recipe') }}" class="waves-effect waves-light btn search-result-view-btn view-btn red lighten-3">Find A Recipe</a>
     </div>
   </div>
 </section>
 
+
 <!-- Results List -->
 <section class="container">
+  
   <ul class="recipe-list">
     {% for rec in recipes %}
     <li>
@@ -35,8 +39,9 @@
           >
         </div>
       </div>
-      {% endfor %}
-    {% for rec in ingredients %}
+      {% endfor %} {% for rec in ingredients %}
+    </li>
+
     <li>
       <div class="row recipes collapsible-header white-text red lighten-3">
         <div class="recipes-img col s12 m3">
@@ -60,7 +65,26 @@
           >
         </div>
       </div>
-      {% endfor %} {% endblock %}
+      {% endfor %}
     </li>
   </ul>
+
+<!-- If no recipe, render this -->
+
+{% if recipesNum == 0 %}
+{% if ingredientsNum == 0 %}
+  <section class="container">
+  <div class="row center-align">
+    <div class="col s12 m6 find_recipe_col">
+      <h2>Sorry, no recipes found!</h2>
+      <p>Want to search again?</p>
+      <a href="{{ url_for('find_recipe') }}" class="waves-effect waves-light btn search-result-view-btn view-btn red lighten-3">Find A Recipe</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+{% endif %}
+
+<!--  -->
+{% endblock %}
 </section>
