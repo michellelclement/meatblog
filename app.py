@@ -176,8 +176,9 @@ def search():
 # View searched recipe result
 @app.route("/view_search_result/<recipe_id>", methods=['GET'])
 def view_search_result(recipe_id):
-    search_results = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("view_search_result.html", search_results)
+    recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    ingredients = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("view_search_result.html", recipes=recipes, ingredients=ingredients)
 
 
 if __name__ == "__main__":

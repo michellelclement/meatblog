@@ -3,7 +3,7 @@
 <section class="container center-align">
   <div class="row">
     <div class="col s12">
-      <h1>{{ search_results.recipe_name }}</h1>
+      <h1>{{ recipes.recipe_name }}</h1>
     </div>
   </div>
 </section>
@@ -13,14 +13,16 @@
   <div class="col l6 s12 recipe-info-text">
     <div class="card-panel">
       <h2>Ingredients</h2>
-      {% for ingredient in search_results.recipe_ingredients.splitlines() %}
+      {% for ingredient in recipes.recipe_ingredients.splitlines() %}
       <p>{{ ingredient }}</p>
       {% endfor %}
       <h2>Method</h2>
+      {% for method in recipes.recipe_method.splitlines() %}
       <p>{{ method }}</p>
+      {% endfor %}
       <div id="recipe-by">
-        <h3>Recipe posted by: {{ search_results.created_by }}</h3>
-        <p>Recipe posted on: {{ search_results.date_added }}</p>
+        <h3>Recipe posted by: {{ recipes.created_by }}</h3>
+        <p>Recipe posted on: {{ recipes.date_added }}</p>
         <!-- Share Buttons, from sharethis.com -->
         <h4>Share this recipe</h4>
         <div class="sharethis-inline-share-buttons"></div>
@@ -28,16 +30,15 @@
     </div>
   </div>
 
-  <!-- Recipe Image -->
+    <!-- Recipe Image -->
   <div class="col l6 s12 recipe-image">
     <div class="card-panel">
       <img
         class="responsive-img"
-        src="{{ search_results.image_url }}"
-        alt="image of {{ search_results.recipe_name }}"
+        src="{{ recipes.image_url }}"
+        alt="image of {{ recipes.recipe_name }}"
       />
     </div>
   </div>
 </section>
-
 {% endblock %}
