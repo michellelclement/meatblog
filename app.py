@@ -168,9 +168,11 @@ def view_recipe(recipe_id):
 @app.route("/search", methods=["GET", "POST"])
 def search():
     search = request.form["search"]
-    recipes = mongo.db.recipes.find({"recipe_name" : {"$regex": search}})
-    ingredients = mongo.db.recipes.find({"recipe_ingredients" : {"$regex": search}})
-    return render_template("search_results.html", recipes=recipes, ingredients=ingredients)
+    recipes = mongo.db.recipes.find({"recipe_name": {"$regex": search}})
+    ingredients = mongo.db.recipes.find({"recipe_ingredients":
+                                        {"$regex": search}})
+    return render_template("search_results.html",
+                           recipes=recipes, ingredients=ingredients)
 
 
 # View searched recipe result
@@ -178,7 +180,8 @@ def search():
 def view_search_result(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     ingredients = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("view_recipe.html", recipe=recipe, ingredients=ingredients)
+    return render_template("view_recipe.html",
+                           recipe=recipe, ingredients=ingredients)
 
 
 if __name__ == "__main__":
