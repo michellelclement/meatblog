@@ -376,4 +376,4 @@ A huge thank you to fellow student and slack member Mark O'Beirne for reviewing 
 
 Thank you to Slack members and Pauld0051for testing out the website and highlighting a display issue on his mobile, and Ivan Branimir Skoric for his help in directing me to the answers I needed for internal page linking.
 
-I would also like to extend my thanks to the Tutors who helped me solve many of my bugs. These include Stephen Moody, Cormac Lawlor and Johann Alberts. 
+I would also like to extend my thanks to the Tutors who helped me solve many of my bugs. These include Stephen Moody, Cormac Lawlor, Roman and Johann Alberts. 
