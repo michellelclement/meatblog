@@ -87,6 +87,8 @@ Whilst I was in the process of building the website, I decided to make a few sma
 
 Removal of Delete button from Find Recipe page: I decided to only have the ‘delete recipe’ button within the ‘Edit Recipe’ page rather than the Find a Recipe page also. I felt that there were too many buttons on the ‘Find a Recipe’ page and I did not want to confuse users or take away from the main part of the page – viewing the recipes themselves. Removing the Delete button from this section made the page much cleaner and improved usability of the page.
 
+Addition of search function: I decided that the site needed a search function now, rather than in the future, so decided to build this into the project rather than add it in the future. The recipe list could quickly get long, so a search feature was important from the start. 
+
 Added an image on Find a Recipe page: I decided to add an image to each recipe on the ‘Find a Recipe’ page. I felt that being a recipe website, the visual cue for each recipe would be important in the section. I feel that the overall result is a huge improvement and make the page much more visually appealing, as well as making recipes easier to find.
 
 Adding form helpers: I decided to add form helper information to the following pages: ‘Sign up’, ‘Add Recipe’ and ‘Edit Recipe.’ Initially, the helpers were to provide the user-specific instructions on how to upload a recipe to the website so that it would be formatted correctly (each item must be on a new line) and to explain to a user what is expected to upload an image. Another reason I decided to add helpers was due to my mentor testing the website and not being able to sign up. I decided that I should make it clear what would be accepted as a username, password etc. (A-Z, numbers but not special characters).
@@ -115,6 +117,8 @@ Adding form helpers: I decided to add form helper information to the following p
 
 **Order recipes by date added to see new ones first:** The Find a Recipe page is organised by newest posted recipe first/at the top. This will make it easier for new and returning visitors to view the latest recipes.
 
+**Search or filter functionality:** There would hopefully come a time when the website has so many recipes they need to be whittled down. I decided to add a search function as I felt this would be very important to the user experience of the site. Users are able to stype a search term or word into the field and results would be displayed where the Recipe Name or Recipe Ingredients matched. The search is case insensitive also.
+
 **The ability for a user to upload a photo to go with their recipe:** Users can add images to their posted recipe via the Add Recipe and Edit Recipe form by including a URL to the image.
 
 **Security features:** The website uses [Werkzeug's](https://werkzeug.palletsprojects.com/en/1.0.x/) standard built in password hashing method for its log in security features to make the security authentication more secure. Werkzeug hashes the password (converts the password into another string) and then it is salted (additional data added) entered by the user. This makes the password very tough to crack. 
@@ -131,7 +135,6 @@ There are several features I would like to add to the website in the future. I a
 
 **Send recipe to site owner for approval before posting:** This would eliminate spam postings and also low quality or inappropriate posts. For now, these need to be manually looked over frequently.
 
-**Search or filter functionality:** There would hopefully come a time when the website has so many recipes they need to be whittled down. I would like to add a filter function which could include specific ingredients, or a search function for the same.
 
 
 
@@ -247,6 +250,7 @@ I used the [W3C HTML Validator](https://validator.w3.org) to check the validity 
 
 *As a frequent user, I want to find new recipes to cook*
 * Recipes on the ‘Find a Recipe’ page have been organised to display the newest recipes first, making it easy for a returning visitor to be able to view new recipes, rather than need to look for them.
+* A search function is also available to the user on this page so that they can add in a key word or phrase, and have all results matching that keyword or phrase returned. If there are no results found, a message will appear to the user stating this and directing them back to the all recipe/search page. The search searches for the word or phrase in the Recipe Name and Recipe Ingredients field, so they can search for something which includes an ingredient or the name itself.
 
 *As a frequent user, I want to be able to share recipes that I like to my social network pages*
 * Social share buttons have been added to the View Recipe page. This allows the website user to share that particular recipe to social pages, as well as share a link in an email.
@@ -284,7 +288,7 @@ By deploying Meatblog to Heroku, I was able to run my Python app and view a live
 1. Within my Heroku.com account I create a new App called metablog and chose the region closes to me, Europe.
 1. Within the deploy sections which opened automatically after creating the app, I selected the Deployment Method of Connecting to GitHub via the logo. 
 1. Beneath this I typed the GitHub repository name metablog and hit search. When the correct repository was found I clicked the ‘connect’ button.
-1. Next, I clicked on ‘Settings’, then in Config Vars, I clicked ‘Reveal config Vars’. I willed out the Config Vars with the following information:
+1. Next, I clicked on ‘Settings’, then in Config Vars, I clicked ‘Reveal config Vars’. I filled out the Config Vars with the following information:
 
 Config Vars | Config Vars
 ------------ | -------------
