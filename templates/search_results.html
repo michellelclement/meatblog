@@ -4,15 +4,17 @@
   <div class="row center-align">
     <div class="col s12 m6 find_recipe_col">
       <h1>Search Results</h1>
-      <a href="{{ url_for('find_recipe') }}" class="waves-effect waves-light btn search-result-view-btn view-btn red lighten-3">Start New Search</a>
+      <a
+        href="{{ url_for('find_recipe') }}"
+        class="waves-effect waves-light btn search-result-view-btn view-btn red lighten-3"
+        >Start New Search</a
+      >
     </div>
   </div>
 </section>
 
-
 <!-- Results List -->
 <section class="container">
-  
   <ul class="recipe-list">
     {% for rec in recipes %}
     <li>
@@ -68,22 +70,24 @@
     </li>
   </ul>
 
-<!-- If no recipe, render this -->
+  <!-- If no recipe, render this -->
 
-{% if recipesNum == 0 %}
-{% if ingredientsNum == 0 %}
+  {% if recipesNum == 0 %} {% if ingredientsNum == 0 %}
   <section class="container">
-  <div class="row center-align">
-    <div class="col s12 m6 find_recipe_col no_results">
-      <h2>Sorry, no recipes found!</h2>
-      <p>Want to search again?</p>
-      <a href="{{ url_for('find_recipe') }}" class="waves-effect waves-light btn search-result-view-btn view-btn red lighten-3">Find A Recipe</a>
+    <div class="row center-align">
+      <div class="col s12 m6 find_recipe_col no_results">
+        <h2>Sorry, no recipes found!</h2>
+        <p>Want to search again?</p>
+        <a
+          href="{{ url_for('find_recipe') }}"
+          class="waves-effect waves-light btn search-result-view-btn view-btn red lighten-3"
+          >Find A Recipe</a
+        >
+      </div>
     </div>
-  </div>
-</section>
-{% endif %}
-{% endif %}
+  </section>
+  {% endif %} {% endif %}
 
-<!--  -->
-{% endblock %}
+  <!--  -->
+  {% endblock %}
 </section>

@@ -56,7 +56,7 @@ The website makes creating, reading, updating and deleting recipes easy and stra
 
 ## Frequent User Goals:
 * As a frequent user, I want to be able to share my own recipes to the website and with the community in an easy way
-* As a frequent user, I want to be find new recipes to cook
+* As a frequent user, I want to be able to find new recipes to cook
 * As a frequent user, I want to be able to share recipes that I like to my social network pages
 
 ## Returning External User Goals:
