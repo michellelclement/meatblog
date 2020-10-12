@@ -221,7 +221,7 @@ footer {
 
 /* Search Results Page */
 .no_results > h2 {
-    color: red;
+    color: #ef5350;
 }
 
 /* Add a Recipe */

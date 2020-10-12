@@ -73,7 +73,7 @@ Using the user stories above, I put together the wireframes for Meatblog using [
 
 Due to the navigation items changing depending on whether a user is signed in or not, a number of additional wireframes were needed to be created to show the difference. For example, when a user is not signed in to the site, they cannot view the ‘Add Recipe’ page and can see buttons in the main navigation for ‘Sign Up’ and ‘Sign In.’ 
 
-When a user has registered/signed into the site, these buttons are hidden and ‘Sign Out’ becomes visible, as does ‘Add a Recipe.
+When a user has registered/signed into the site, these buttons are hidden and ‘Sign Out’ becomes visible, as does ‘Add a Recipe'.
 
 [You can view all of the wireframes here](static/readme_docs/wireframes.pdf)
 
@@ -89,7 +89,7 @@ Removal of Delete button from Find Recipe page: I decided to only have the ‘de
 
 Addition of search function: I decided that the site needed a search function now, rather than in the future, so decided to build this into the project rather than add it in the future. The recipe list could quickly get long, so a search feature was important from the start. 
 
-Added an image on Find a Recipe page: I decided to add an image to each recipe on the ‘Find a Recipe’ page. I felt that being a recipe website, the visual cue for each recipe would be important in the section. I feel that the overall result is a huge improvement and make the page much more visually appealing, as well as making recipes easier to find.
+Added an image on Find a Recipe page: I decided to add an image to each recipe on the ‘Find a Recipe’ page. I felt that being a recipe website, the visual cue for each recipe would be important in the section. I feel that the overall result is a huge improvement and makes the page much more visually appealing, as well as making recipes easier to find.
 
 Adding form helpers: I decided to add form helper information to the following pages: ‘Sign up’, ‘Add Recipe’ and ‘Edit Recipe.’ Initially, the helpers were to provide the user-specific instructions on how to upload a recipe to the website so that it would be formatted correctly (each item must be on a new line) and to explain to a user what is expected to upload an image. Another reason I decided to add helpers was due to my mentor testing the website and not being able to sign up. I decided that I should make it clear what would be accepted as a username, password etc. (A-Z, numbers but not special characters).
 
@@ -117,11 +117,11 @@ Adding form helpers: I decided to add form helper information to the following p
 
 **Order recipes by date added to see new ones first:** The Find a Recipe page is organised by newest posted recipe first/at the top. This will make it easier for new and returning visitors to view the latest recipes.
 
-**Search or filter functionality:** There would hopefully come a time when the website has so many recipes they need to be whittled down. I decided to add a search function as I felt this would be very important to the user experience of the site. Users are able to stype a search term or word into the field and results would be displayed where the Recipe Name or Recipe Ingredients matched. The search is case insensitive also.
+**Search functionality:** There would hopefully come a time when the website has so many recipes they need to be whittled down. I decided to add a search function as I felt this would be very important to the user experience of the site. Users are able to type a search term or word into the field and results would be displayed where the Recipe Name or Recipe Ingredients matched. The search is case insensitive also.
 
 **The ability for a user to upload a photo to go with their recipe:** Users can add images to their posted recipe via the Add Recipe and Edit Recipe form by including a URL to the image.
 
-**Security features:** The website uses [Werkzeug's](https://werkzeug.palletsprojects.com/en/1.0.x/) standard built in password hashing method for its log in security features to make the security authentication more secure. Werkzeug hashes the password (converts the password into another string) and then it is salted (additional data added) entered by the user. This makes the password very tough to crack. 
+**Security features:** The website uses [Werkzeug's](https://werkzeug.palletsprojects.com/en/1.0.x/) standard built in password hashing method for its log in security features to make the security authentication more secure. Werkzeug hashes the password  entered by the user (converts the password into another string) and then it is salted (additional data added). This makes the password very tough to crack. 
 
 **Flash messages:** Flash messages will appear on the website at the top of the page, under the main navigation. These appear for successful and non-successful registration, successful sign in and out, successfully updated and added recipes.
 
@@ -142,7 +142,9 @@ There are several features I would like to add to the website in the future. I a
 After carefully considering the elements of the website and the items needed to be stored in and retrieved from the database, I designed the schema to have 3 collections:
 
 **users:** for sign up and sign in
-**recipes:** containing all the elements required for CRUD (create, read, update and delete). The keys in the recipes collection are pulled into the site in the sections ‘Find a Recipe’, ‘Add Recipe’ and ‘Edit Recipe’ and also to delete the recipe from the database.
+
+**recipes:** containing all the elements required for CRUD (create, read, update and delete). The keys in the recipes collection are pulled into the site in the sections ‘Find a Recipe’, ‘Add Recipe’, ‘Edit Recipe’ and 'Search Results' and also to delete the recipe from the database.
+
 **categories:** The ability for users to store and see the different categories in which the recipes are stored and relating to.
 
 ![Schema](static/readme_docs/schema.png)
@@ -151,23 +153,33 @@ The keys for each collection were decided as follows:
 
 ### users:
 **_id:** to be able to reference the user via a unique id
+
 **username:** the username in which the user would like to be known within the website
+
 **Password:** The password for which the user wishes to be able to log into the website
+
 
 ### recipes:
 **_id:** Unique identifier for the recipe
+
 **category:** The selected category of which the recipe applies to
+
 **recipe_name:** the name in which the user wants to name the recipe
+
 **recipe_method:** text describing the method to cook the recipe
+
 **image_url:** a url to be supplied by the user to add an image to their recipe
+
 **created_by:** this records the name of the user which entered the recipe into the website
+
 **date_added:** this records the date and time of when the recipe was entered
 
 ### categories: the category items are pre-set by the website owner and can only be changed by the website owner.
 **_id:** the unique identifier for each category item 
+
 **category:** the name of the category. The items set are Breakfast, Lunch, Dinner, Snacks 
 	
-I decided to use MongoDB to store the details entered into the database as it fit the method needed and I 
+I decided to use MongoDB to store the details entered into the database as it fit the method needed.
 
 
 ## Technologies Used
@@ -199,7 +211,7 @@ I used a number of languages, frameworks and tools to construct my website. Thes
 
 ## Testing
 
-**PEP8 Compliance**
+**PEP8 Compliance:**
 I used the website [PEP8](http://pep8online.com/) to check my app.py files complied with the PEP8 requirements. 
 
 1st test of code: 2 Errors occurred:
@@ -226,6 +238,10 @@ I used the [W3C HTML Validator](https://validator.w3.org) to check the validity 
     * Error: Bad value for attribute value on element input: Line feed not allowed - I believe this error is being displayed due to the Edit Recipe page being pre-filled with content in order to edit it. The value being pulled into the value attribute comes from the recipe database which is then formatted to display on the view_recipe page with splitlines. When I paste the html code directly into the validator, this error does not appear.
 * Recipes.html (Find a Recipe page)
     * Passed with no errors
+* Search_results.html
+    * Error displayed: IO Error: HTTP resource not retrievable. The HTTP status from the remote server was: 500.
+    * I believe this error is due to the page usually displaying the results of a search, but checking this url in the HTML checker will display an error as it is unable to check the page on its own and does not have the search result information.
+    * When the code from this page was pasted into the HTML checker, the only errors displayed were due to the templating and url_for linking.
 * Sign_in.html
     * Passed with no errors
 * Sign_up.html
@@ -250,7 +266,7 @@ I used the [W3C HTML Validator](https://validator.w3.org) to check the validity 
 
 *As a frequent user, I want to find new recipes to cook*
 * Recipes on the ‘Find a Recipe’ page have been organised to display the newest recipes first, making it easy for a returning visitor to be able to view new recipes, rather than need to look for them.
-* A search function is also available to the user on this page so that they can add in a key word or phrase, and have all results matching that keyword or phrase returned. If there are no results found, a message will appear to the user stating this and directing them back to the all recipe/search page. The search searches for the word or phrase in the Recipe Name and Recipe Ingredients field, so they can search for something which includes an ingredient or the name itself.
+* •	A search function is also available to the user on this page so that they can add in a key word or phrase, and have all results matching that keyword or phrase returned. If there are no results found, a message will appear to the user stating this and directing them back to the all recipe/search page. The search searches for the word or phrase in the Recipe Name and Recipe Ingredients field, so they can search for something which includes an ingredient or the name itself.
 
 *As a frequent user, I want to be able to share recipes that I like to my social network pages*
 * Social share buttons have been added to the View Recipe page. This allows the website user to share that particular recipe to social pages, as well as share a link in an email.
@@ -331,7 +347,7 @@ Do not commit this page.
 
 
 ## Secret Key & Key Variables
-Secret keys should not be pushed to GitHub, or shared with anyone. To avoid this happening, I included my Secrecy Key and key variables in a file which is stored locally.
+Secret keys should not be pushed to GitHub, or shared with anyone. To avoid this happening, I included my Secret Key and key variables in a file which is stored locally.
 
 The file env.py includes these key variables and secret key. 
 
@@ -357,13 +373,15 @@ Additionally, I used the following grey colours:
 
 **Fonts:**
 Both fonts I chose were from Google fonts.
+
 Playfair Display: I liked this font as it is a little more traditional in a modern way. It is clear to read and pairs nicely with the foodie theme of the website.
+
 Sans Serif: I wanted to keep the body copy of the website clear, modern and easy to ready, and Sans Serif is not only the perfect font for this, but it pairs beautifully with Playfair. 
 
 ## Credits
 **Social Sharing buttons:** To add simple and stylish share buttons to the website I used the plugin by: Sharethis.com 
 
-**Images:** All homepage images are my own. Images used within recipe submissions have been submitted via me and testers using URL links to external sources.
+**Images:** All homepage images are my own. Images used within recipe submissions have been submitted via me and testers using URL links to external sources and are not owned by me or Meatblog.
 
 **Logo:** Designed by myself when I first initially had the idea for Meatblog.
 
@@ -378,6 +396,6 @@ Special Thank you to my fantastic mentor ADEGBENGA ADEYE for helping me with my 
 
 A huge thank you to fellow student and slack member Mark O'Beirne for reviewing my website in great detail in the Peer-Code-Review channel and making some suggestions for improving the website.
 
-Thank you to Slack members and Pauld0051for testing out the website and highlighting a display issue on his mobile, and Ivan Branimir Skoric for his help in directing me to the answers I needed for internal page linking.
+Thank you to Slack members and Pauld0051 for testing out the website and highlighting a display issue on his mobile, and Ivan Branimir Skoric for his help in directing me to the answers I needed for internal page linking.
 
 I would also like to extend my thanks to the Tutors who helped me solve many of my bugs. These include Stephen Moody, Cormac Lawlor, Roman and Johann Alberts. 
