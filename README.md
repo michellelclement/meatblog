@@ -214,6 +214,7 @@ I used a number of languages, frameworks and tools to construct my website. Thes
 **PEP8 Compliance:**
 I used the website [PEP8](http://pep8online.com/) to check my app.py files complied with the PEP8 requirements. 
 
+**app.py file:**
 1st test of code: 2 Errors occurred:
 * Line 2: line too long
     * I corrected this error by adding a backslash part way through the line and moving part of the text to the line below, making sure to add the correct indentation.
@@ -222,6 +223,11 @@ I used the website [PEP8](http://pep8online.com/) to check my app.py files compl
     * I corrected this error by splitting up the long line of text across a further two lines making sure to add the correct indentation.
 
 2nd test: passed with no errors
+
+**env.py file**
+* 1 known error: “line too long (138 > 79 characters)”
+    * Due to my short experience and research, I am unable to find the answer as to whether code lines such as this should be split into concatenated, multi-string lines. For now, this is being left unresolved.
+
 
 **W3C CSS Validator**
 I used the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to check the validity of my CSS code.
